@@ -1,0 +1,3693 @@
+body {
+  font-family: 'Open Sans', sans-serif; 
+    margin: 0;
+    padding: 0;
+    background-color: #0f0f0f;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    align-items: stretch; /* Make children stretch to full width */
+}
+
+#custom-cursor {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 48px;
+    height: 48px;
+    border: 2px solid #EF4523; /* Use the hex color here */
+    border-radius: 50%;
+    background-color: transparent;
+    pointer-events: none;
+    z-index: 9999;
+    transition: transform 0.1s ease;
+    mix-blend-mode: difference;
+    position: fixed;
+    opacity: 0; /* Hide initially */
+    transition: opacity 0.2s ease-in-out;
+}
+
+/*  Class for the solid state */
+#custom-cursor.solid {
+    background-color: #EF4523; /*  Solid red */
+    mix-blend-mode: difference; /* Remove mix blend mode */
+    border: none;
+    z-index: 9999;
+    transition: transform 0.1s ease;
+    cursor: pointer;
+
+
+
+}
+
+
+
+
+/*  Apply to common clickable elements */
+a, button, input[type="submit"], input[type="button"], input[type="radio"], input[type="checkbox"], label, select, summary, [role="button"], [tabindex] {
+  cursor: none; /*Important: Hide default cursor on these elements*/
+}
+
+/* --- Header and Navigation --- */
+.bg-grid-line {
+    width: 99%;
+    height: 900px;
+    overflow: hidden;
+    position: absolute; 
+    bottom: -90px;
+    z-index: -1; /* Place the grid behind the content */
+ 
+  overflow: hidden;
+  perspective: 450px;
+  position: absolute;
+}
+
+.bg-line {
+    width: 100%;
+    height: 100%;
+    perspective: 450px; 
+    transform: rotateX(50deg);
+    opacity:.07;
+    overflow: hidden;
+}.bg-line::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 200%;
+    background-image: linear-gradient(to right,#fff 1px,transparent 0),linear-gradient(to bottom,#fff 1px,transparent 0);
+    background-size: 40px 40px;
+    background-repeat: repeat;
+    animation: playline1 35s linear infinite;
+}
+
+@keyframes playline1 {
+    0% { transform: translateY(0); }
+    100% { transform: translateY(-50%); }
+}
+
+
+/* --- Header and Navigation --- */
+/* --- Basic Reset (You can use Modern Normalize or your preferred reset) --- */
+*, *::before, *::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Inter', sans-serif; /* Or your chosen font */
+    line-height: 1.6;
+    background-color: #0f0f0f; /* Your background color */
+    color: #fff; /* Your text color */
+    
+}
+
+/* --- Header Styles --- */
+/* --- Header Styles (adjustments for SVG logo) --- */
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent background */
+    backdrop-filter: blur(10px); /* Add blur effect */    padding: 1rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+    transition: background-color 0.3s ease;
+    
+}
+
+header.scrolled {
+    background-color: rgba(0, 0, 0, 0.9);
+}
+.logo {
+    display: flex; /* Use flexbox for vertical centering */
+    align-items: center;
+    text-decoration: none; /* Remove underline */
+}
+
+.logo-svg {
+    width: clamp(8rem, 6vw, 4rem); /* Control size responsively */
+    height: auto;  /* Maintain aspect ratio */
+}
+
+/* Optional: Hover effect (limited with <img> tag) */
+.logo:hover .logo-svg {
+    transform: scale(1.05); /* Slight scale on hover */
+    transition: transform 0.3s ease;
+}
+
+/* (Rest of your header/nav CSS) */
+
+
+
+nav {
+    display: flex;
+    align-items: center;
+    /* padding: 1rem 2rem; */ /* Remove padding from nav if you added it here */
+    width: 100%; /* Ensure nav takes full width */
+    justify-content: space-between; /* Distribute space evenly */
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center; /* Center the ul content */
+    align-items: center;
+    width: 100%; /* Ensure ul takes full width */
+    margin-left: -30px;
+
+}
+
+nav ul li {
+    margin: 0 1.5rem; /* Use margin on li for spacing */
+}
+
+nav a {
+    color: var(--nav-link-color);
+    text-decoration: none;
+    font-family: 'Fjalla One', sans-serif;
+    padding: 0.5rem 0.8rem;
+    display: inline-block;
+    position: relative;
+    transition: color 0.3s ease;
+    font-size: clamp(0.8rem, 1.5vw, 1.5rem);
+}
+
+nav a::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: var(--nav-link-hover-color);
+    transition: width 0.3s ease;
+}
+
+nav a:hover::before,
+nav a.active::before {
+    width: 100%;
+}
+
+nav a.active {
+    color: var(--nav-link-active-color);
+    font-weight: bold;
+}
+
+/* --- Mobile Menu (Hamburger) --- */
+.menu-toggle {
+    display: none;
+    cursor: pointer;
+    z-index: 101;
+    position: relative;
+    width: 36px; /* Increased size */
+    height: 28px; /* Increased size */
+}
+
+.hamburger-container {
+    position: absolute;
+    top: 50%; /* Center vertically */
+    left: 50%;
+    transform: translate(-50%, -50%); /* Center perfectly */
+    width: 24px; /* Adjust container size */
+    height: 20px; /* Adjust container size */
+    overflow: hidden;
+}
+
+.menu-toggle span {
+    display: block;
+    width: 100%;
+    height: 3px; /* Adjust thickness */
+    background-color: white;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+    position: absolute;
+    left: 0;
+    border-radius: 4px; /* More rounded */
+}
+
+
+
+nav.open a { /* Assuming you add an 'open' class to your nav when the menu is active */
+    font-size: 1.5rem; /* Adjust this value as needed */
+    /* Add other styles as desired, like color, padding, etc. */
+  }
+  
+  /* If you have a different way of showing the menu, adjust the selector accordingly */
+
+/* Position the bars */
+.burger-top {
+    top: 0;
+}
+
+.burger-middle {
+    top: 50%;
+    transform: translateY(-50%); /* Center the middle bar */
+}
+
+.burger-bottom {
+    bottom: 0;
+}
+
+/* Hamburger to X */
+.menu-toggle.open .hamburger-container .burger-top {
+    transform: translateY(8px) rotate(45deg); /* Adjust Y translation */
+}
+
+.menu-toggle.open .hamburger-container .burger-bottom {
+    transform: translateY(-8px) rotate(-45deg); /* Adjust Y translation */
+}
+
+.menu-toggle.open .hamburger-container .burger-middle {
+    opacity: 0; /* Hide the middle bar */
+}
+
+/* --- Mobile Styles (Media Query) --- */
+@media (max-width: 768px) {
+    header {
+        padding: 1rem;
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+
+    nav {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background-color: rgba(0, 0, 0, 0.95);
+        display: none;
+    }
+
+    nav.open {
+        display: block;
+    }
+
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+        padding: 1rem 0;
+    }
+
+    nav ul li {
+        margin: 0.6rem 0;
+    }
+
+    nav a {
+        padding: 0.7rem 1rem;
+        display: block;
+        width: 100%;
+        text-align: center;
+    }
+
+    nav a::before {
+        display: none;
+    }
+}
+
+
+
+
+/* --- Main Content ---*/
+/* Add some basic styles to make sections visible */
+
+/* --- Main and Footer --- */
+main {
+    flex-grow: 1; /* Fill available space */
+    /* Add other styles for your main content here */
+    padding-top: 70px; /* Adjust the value as needed */
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #1a1a1a; /* Slightly lighter background */
+    /* Add other styles for your footer here */
+}
+
+/* --- Main Content Area --- */
+main {
+    padding-top: 5px; /* Adjust based on header height */
+    flex-grow: 1;
+    padding-top: 70px; /* Adjust this value to match your header's height + a little extra */
+    flex-grow: 1;
+}
+
+
+/* --- Hero Section --- */
+
+#hero {
+    position: relative;  /* Needed for absolute positioning of image and text */
+    width: 100%;
+    height: 100v;       /* Full viewport height */
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Center content vertically */
+    align-items: center;     /* Center content horizontally */
+    overflow: visible;    /* Hide overflowing content (for the image) */
+    background-color: var(--hero-bg-color);	 
+    padding: 20px;
+	 box-sizing: border-box;
+     padding-top: 120px;     
+}
+/* Overlay for noise - CHANGED */
+#hero::before {
+    pointer-events: none; /* Add this line */
+    content: '';
+    position: fixed;
+    top: -50%;
+    left: -50%;
+    right: -50%;
+    bottom: -50%;
+    width: 200%;
+    height: 200vh;
+    background: transparent url('Images/Textures/noise-transparent.png') repeat 0 0;
+    background-repeat: repeat;
+    animation: bg-animation .2s infinite;
+    opacity: 1;
+    visibility: visible;
+    z-index: 999;
+}
+/*  Animation Keyframes - MUCH simpler movement */
+@keyframes bg-animation {
+    0% { transform: translate(0,0) }
+    10% { transform: translate(-5%,-5%) }
+    20% { transform: translate(-10%,5%) }
+    30% { transform: translate(5%,-10%) }
+    40% { transform: translate(-5%,15%) }
+    50% { transform: translate(-10%,5%) }
+    60% { transform: translate(15%,0) }
+    70% { transform: translate(0,10%) }
+    80% { transform: translate(-15%,0) }
+    90% { transform: translate(10%,5%) }
+    100% { transform: translate(5%,0) }
+}
+
+
+.hero-text {
+    text-align: center;
+    z-index: 2; /*  Above the image */
+    position: relative; /*  Needed for z-index to work */
+}
+
+
+.hero-subtitle{
+    font-size: 10vw;
+    color: #a9a9a9;
+   position: relative;
+   z-index: 2;
+   margin-top: 1.5em;
+}
+
+.hero-image-container {
+    position: absolute; /* Absolute positioning for mouse follow */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;  /*  Below the text */
+     /*  We *keep* pointer-events on the container for the mouse-follow effect */
+}
+
+
+.hero-image-container-404 {
+    position: absolute; /* Absolute positioning for mouse follow */
+    top: 400px;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;  /*  Below the text */
+     /*  We *keep* pointer-events on the container for the mouse-follow effect */
+}
+
+
+
+.hero-text h1 {
+    font-size: clamp(8vw, 15em, 20em); /* Adjust values as needed */  
+    font-family: 'Oswald', sans-serif;  /* Use Oswald */    margin: 0;
+    line-height: 1;
+    color: var(--highlight-text-color);     
+    max-width: 100%;
+    display: inline-block;
+    transition: transform 0.3s ease, opacity 0.3s ease;  /*  Slide and fade */
+    mix-blend-mode: screen;
+}
+.hero-text h1:hover {
+    font-weight: 900; /* Bold on hover */
+    transition: transform 0.3s ease, opacity 0.3s ease;  /*  Slide and fade */
+    mix-blend-mode: screen;
+
+}
+
+
+.letter {
+    display: inline-block;
+    transition: transform 01s ease; /*  Short transition for responsiveness */
+    transition: transform 0.3s ease, opacity 0.3s ease;  /*  Slide and fade */
+    mix-blend-mode: screen;
+
+}
+@media (max-width: 768px) { /*  Example breakpoint */
+    .hero-text h1 {
+        font-size: 16vw; /*  Increase scaling for smaller screens */
+    }
+}
+
+
+
+
+
+
+
+.hero-subtitle{
+    font-size: 1.3em;
+    color: #a9a9a9;
+   position: relative;
+   z-index: 2;
+   margin-top: .5em;
+}
+
+
+.framer-PVQlM .framer-expajc {
+  align-content: center;
+  align-items: center;
+  display: flex;
+  flex: none;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  gap: 10px;
+  height: 34px;
+  justify-content: center;
+  overflow: hidden;
+  padding: 0;
+  position: relative;
+  width: 3px;
+}
+.hero-image {
+    width: 100%; /* Adjust as needed */
+    height: auto;
+    max-width: 900px; /* Limit maximum size */
+    max-height: 600px;
+    border-radius: %;
+    object-fit: fit;
+    position: absolute;
+    top: 44%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    animation: float-xy 92s ease-in-out infinite; /* Longer duration */
+    color: #a9a9a9;
+}
+
+.hero-image-404 {
+    width: 100%; /* Adjust as needed */
+    height: auto;
+    max-width: 1200px; /* Limit maximum size */
+    max-height: 1200px;
+    border-radius: %;
+    object-fit: fit;
+    position: absolute;
+    top: 420px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    animation: float-xy 92s ease-in-out infinite; /* Longer duration */
+    color: #a9a9a9;
+}
+
+
+@keyframes float-xy {
+    0% {
+        transform: translate(-50%, -50%);
+    }
+    25% {
+        transform: translate(-60%, -60%); /* Move up and left */
+    }
+    50% {
+        transform: translate(-40%, -40%); /* Move down and right */
+    }
+    75% {
+        transform: translate(-60%, -40%); /*Move down and left*/
+    }
+    100% {
+        transform: translate(-50%, -50%);
+    }
+}
+
+.tagline {
+    font-size: 1.2em;
+    z-index: 3; /* Keep the z-index, in case you need it later */
+    text-align: center; /* Center the text horizontally within its container */
+    width: 100%; /* Make the tagline container full-width */
+    margin-top: .2em; /* Add some space above the tagline. Adjust as needed */
+}
+
+/* --- Marquee Section --- */
+
+
+/* --- Marquee Styles --- */
+.marquee-container { /* NEW - the wrapper */
+    overflow: hidden; /*  This is the key to clipping the overflow */
+    background-color: var(--marquee-bg-color);
+        padding: 30px 0;
+    margin-top: 7.5em;
+    position: relative;
+    padding-left: 1rem; /* Adjust as needed */
+    padding-right: 1rem; /* Adjust as needed */
+}
+
+.marquee {
+    white-space: nowrap; /*  Keep this to prevent wrapping */
+    position: relative; /* Add to keep the marquee centered */
+    
+}
+
+.marquee-track {
+    display: inline-block; /*  Important:  Allows the width to be set dynamically */
+    white-space: nowrap;
+    will-change: transform;
+    /* No animation defined here anymore */
+}
+
+.marquee-content {
+    
+    font-size: 2em;
+    font-weight: bold;
+    font-family: 'Oswald', sans-serif;
+    color: var(--marquee-text-color); /* Using the variable */
+        display: inline-block; /*  Important */
+}
+
+.marquee-content i {
+    margin: 0 5px; /* Adjust spacing as needed */
+    color: var(--marquee-icon-color); /* Using the variable */
+        vertical-align: middle;
+}
+
+
+/* NEW: Pseudo-element to create the extra 5% on each side */
+.marquee-container::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -5%; /* Extend 5% to the left */
+    width: 110%; /* 100% + 5% (left) + 5% (right) = 110% */
+    height: 100%;
+    z-index: -1; /* Place it behind the content */
+    pointer-events: none; /* Make it non-interactive */
+}
+/* ... (rest of your existing CSS) ... */
+
+
+/* --- Portfolio Section --- */
+
+
+.project-link.fittra-london .project-title {
+    background-color: projects.find(p => p.class === 'fittra-london').color;
+}
+
+#portfolio {
+    padding: 80px 20px; /* Increased padding for better visual spacing */
+    box-sizing: border-box;
+    width: 100%;
+    position: relative; /* To position the grid */
+    scroll-margin-top: 70px; /* Height of your fixed header, adjust as needed */
+    justify-content: center;
+    display: flex;
+}
+    
+ /* style.css */
+
+/* General styles for the grid container */
+.grid-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr; /* Three equal-width columns */    
+    gap: 30px;
+    margin-bottom: 60px;
+    justify-content: center;
+    max-width: 90%;
+}
+
+/* General styles for each project link */
+.project-link {
+    border-radius: 40px;
+    overflow: hidden;
+    text-decoration: none;
+    color: rgb(26, 26, 26); /* Default color, can be overridden */
+    font-family: 'HelveticaNeueCyr Roman', sans-serif;
+    transition: transform 0.3s ease; /* Add a smooth transition for hover effects */
+    
+}
+.project-link:hover{
+    transform: scale(1.02);
+}
+
+/* Styles for the image container within each link */
+.project-link > div:first-child { /* Selects the first div child */
+    overflow: hidden;
+    border-radius: 40px;
+}
+
+/* Styles for the images */
+.project-link img {
+    width: 100%;
+    object-fit: cover;
+    border-radius: 40px;
+    transition: scale 0.42s cubic-bezier(0.28, 0.11, 0.32, 1);
+    user-select: none; /* Prevents accidental text selection */
+}
+.project-link {
+    transition: transform 0.3s ease; /* Add this line */
+}
+
+.project-link:hover {
+    transform: scale(1.02); /* Slightly enlarge on hover */
+}
+
+
+/* Styles for project content area (title, description, button) */
+.project-content {
+    padding: 30px;
+    color: rgb(255, 255, 255);
+}
+
+.project-title {
+    font-size: 30px;
+    letter-spacing: 1.2px;
+    margin-bottom: 10px;
+}
+
+.project-description {
+    font-size: 16px;
+    line-height: 1.36; /*  (13.6 / 16 = 0.85), then *16 */
+}
+
+/* Styles for the "view case" button */
+.view-case-button {
+    color: rgb(255, 255, 255);
+    margin-top: 20px;
+    padding: 20px 30px;
+    font-family: 'HelveticaNeueCyr Roman', sans-serif;
+    font-weight: 400;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    position: relative;
+    font-size: 18px;
+    line-height: 1.15;  /*(20.7 / 18 )*/
+    letter-spacing: -0.9px;
+    transition: scale 0.42s cubic-bezier(0.28, 0.11, 0.32, 1);
+    border: none; /* Remove default button border */
+    background: transparent; /* Remove default button background */
+    background-color: transparent; /* Make the button background transparent */
+    border: 2px solid #fcfff5; /* Add a border to create the stroke effect */
+    color: #fcfff5; /* Set the initial text color */
+    transition: background-color 0.3s ease, color 0.3s ease; /* Add a transition for smooth hover effect */
+    border-radius: 80px; /* Add this line */
+}.view-case-button:hover {
+    background-color: #fcfff5; /* Fill the button background on hover */
+    color: white; /* Change the text color on hover */
+    color: rgb(10, 10, 10); 
+}
+
+
+.view-case-button span {
+    position: relative;
+    z-index: 3;
+    transition: color 0.62s cubic-bezier(0.28, 0.11, 0.32, 1);
+}
+
+.view-case-button svg {
+    width: 1.5rem;
+    height: 24px;
+    rotate: -135deg;
+    fill: rgb(255, 255, 255);
+    position: relative;
+    z-index: 3;  transition: transform 0.3s ease; 
+}.view-case-button:hover svg {
+  transform: rotate(45deg) scale(1.2); 
+}
+
+.view-case-button path {
+    fill: rgb(255, 220, 31);
+    transition: transform 0.62s cubic-bezier(0.28, 0.11, 0.32, 1);
+}
+/*animation path*/
+.view-case-button path:nth-child(2) {
+    transform: matrix(1, 0, 0, 1, 0, -24);
+}
+
+/* Specific background colors for each project (using classes) */
+.fittra-london { background: rgb(28, 28, 32); }
+.duna-estate { background: rgb(173, 158, 144); }
+.aerated-concrete { background: rgb(51, 51, 51); }
+.iii-assault-brigade { background: rgb(62, 68, 63); }
+.BTCW { background: rgb(10, 11, 54); }
+.TRULIOO { background: rgb(80, 155, 191); }
+.NAIT { background: rgb(59, 60, 61); }
+.hirecode { background: rgb(255, 56, 41); }
+.BsTCW{ background: rgb(255, 56, 41); }
+.poop-estate { background: rgb(255, 123, 0); }
+/* Add more specific styles as needed */
+
+  
+
+
+
+/* Add the hover effect for the border */
+.project-box:hover {
+    padding: 5px; /* Reduce padding on hover */
+}
+
+.project-box:hover > .project-image-container {
+    filter: grayscale(0%);
+    height: calc(100% - 120px);
+    
+}
+
+.project-box:hover > .project-image-container > .project-image {
+    transform: scale(1);
+}
+
+.project-box:hover > .project-info > .project-info-container {
+    transform: translateY(0);
+    opacity: 1;
+}
+.project-image-container {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    filter: grayscale(100%);
+    transition: filter 0.4s ease, height 0.4s ease;
+    border-radius: 8px;
+}
+
+
+.project-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.4s ease;
+    border-radius: 8px; /* Apply border-radius to the image itself */
+}
+
+   .project-info {
+        position: relative; /* Absolute positioning */
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        padding: 25px;
+        box-sizing: border-box;
+        color: white;
+        text-align: left;
+        background-color: black; /* Solid black background */
+        overflow: hidden;
+    }
+
+
+.text-container {
+    margin-bottom: 0;
+    flex: 1;
+    margin-right: 15px;
+}
+
+.project-title {
+    margin: 0 0 5px 0;
+    font-size: 1.4em;
+    font-weight: bold;
+    opacity: 100;
+    transition: transform 0.4s ease, opacity 0.4s ease;
+    color: white;
+	font-family: 'Fjalla One', sans-serif;
+}
+
+.company-name {
+    margin: 0;
+    font-size: 1em;
+}
+
+.view-project-button {
+    display: inline-block;
+    padding: 10px 15px;
+    background-color: #007bff;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 1em;
+    transition: background-color 0.3s ease;
+    border: none;
+    white-space: nowrap; }
+
+
+    margin: 0 0 5px 0;
+    font-size: 1.2em;
+    font-weight: bold;
+
+
+
+
+    @media (max-width: 1200px) { 
+        .grid-container {
+              grid-template-columns: repeat(2, 1fr); /* Two columns on medium screens */
+          }
+      }
+      
+      @media (max-width: 768px) {
+        .grid-container {
+              grid-template-columns: repeat(2, 1fr); /* Two columns on tablets */
+          }
+      
+        .project-title {
+              font-size: 24px; 
+          }
+      
+        .project-description {
+              font-size: 14px; 
+          }
+      
+        .view-case-button {
+              font-size: 16px; 
+          }
+      }
+      
+      @media (max-width: 480px) {
+        .grid-container {
+              grid-template-columns: repeat(1, 1fr); /* Single column on smaller screens */
+          }
+      }
+      
+
+
+
+    
+/* --- About Section --- */
+
+#about {
+    padding: 55px 20px;
+    background-color: var(--about-bg-color);    width: 100%;
+    box-sizing: border-box;
+}
+
+.about-container {
+    padding-top: 20px; /* Adjust based on header height */
+
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.about-text {
+    display: flex;
+    flex-direction: column;
+}
+
+.about-title-container {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 30px;
+    width: 100%;
+    cursor: pointer;
+    margin-top: 100px;
+}
+
+.about-text-left img {
+    width: 10px;
+}
+
+
+/* Existing styles for .about-text h2 */
+.about-text h2 {
+    font-size: 2.5em;
+    margin: 0;
+    font-family: 'Fjalla One', sans-serif;
+    color: var(--highlight-text-color);
+        flex-shrink: 0;
+    position: relative; /*  Important for absolute positioning */
+    z-index: 2;      /* Place the text ABOVE the circle */
+    transition: color 0.3s ease; /* Existing transition for color change */
+}
+
+/* Styles for the circle (::before pseudo-element) */
+/*.about-text h2::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: -0.25em;  /*  Keep your adjusted 'left' value */
+    transform: translateY(-50%);
+    width: 1.5em;  /*  Initial size 
+    height: 1.5em; /*  Initial size
+    background-color: #EF4523; /* Orange color */
+    border-radius: 50%;
+    z-index: -1;
+    transition: transform 0.3s ease; /*  Add transition for transform 
+}*/
+
+/*  Hover styles:  Scale up the circle */
+.about-title-container:hover .about-text h2::before {
+    transform: translateY(-50%) scale(1.5); /*  Scale up by 50% */
+     /*  Keep translateY(-50%) for vertical centering */
+}
+.about-title-container:hover h2{
+    color: #ddd; /*maintain hover effect*/
+}
+
+
+.about-title-container:hover h2 {
+    color: var(--highlight-text-color);
+}
+
+.horizontal-line {
+    flex-grow: 1;
+    height: 2px;        /*  Line height */
+    background-color: transparent; /* No background on main element */
+    position: relative;   /*  For pseudo-element positioning */
+    overflow: visible;    /*  Allow arrow to overflow */
+}
+
+/* Thin Dark Gray Line (::before) */
+.horizontal-line::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: #333; /* Dark gray */
+    transform: translateY(-50%);
+    transition: width 0.3s ease;
+    z-index: 1;
+}
+
+/* Thick Yellow Segment (::after) */
+.horizontal-line::after {
+    content: '';
+    position: absolute;
+    top: 0;          /* Align to top */
+    right: 0;
+    width: 75px;     /* Initial width */
+    height: 100%;     /* Fill container height */
+    background-color: #c7371c; /* Yellow */
+    transition: transform 0.3s ease, opacity 0.3s ease;  /*  Slide and fade */
+    transform-origin: right center;  /*  Slide from the right */
+    z-index: 2;
+    
+    ;
+}
+
+
+.about-title-container::before{
+	top: 0; /*correct positioning*/
+}
+
+.about-title-container::after{
+	top: calc(100% - 2px);/*correct positioning*/
+}
+/* --- Hover Styles --- */
+
+/* Shrink Dark Gray Line */
+.about-title-container:hover .horizontal-line::before {
+    width: calc(100% - 106px); /*  Precise shrinking */
+    transition: all 0.3s cubic-bezier(0.25, 0.1, 0.25, 1); /* Smooth transitions */
+
+}
+
+/* Slide and Hide Thick Yellow Segment */
+.about-title-container:hover .horizontal-line::after {
+    width: calc(100% - 450px); /*  Precise shrinking */
+    -webkit-font-smoothing: antialiased;
+    transition: all 0.3s cubic-bezier(0.25, 0.1, 0.25, 1); /* Smooth transitions */
+
+    opacity: 100;                /* Fade out */
+}
+
+
+
+
+
+/* --- Media Queries and Rest of CSS --- */
+
+/* ... (rest of your CSS - no changes needed) ... */
+
+.about-text-content {
+    display: flex;
+    justify-content: space-between;
+    gap: 80px;
+    align-items: flex-start;
+}
+
+.about-text-left,
+.about-text-right {
+      flex: 1;
+}
+
+.about-text p {
+    margin-bottom: 1em;
+    line-height: 1.5;
+    font-size: 1.05em;
+}
+
+.about-text-left img{
+    width:78%;
+}
+
+.about-button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-top: 2em;
+    transition: background-color 0.3s ease;
+    border: none;
+    cursor: pointer;
+}
+
+.about-button:hover,
+.about-button:focus {
+    background-color: #0056b3;
+}
+
+#about .about-text-content {
+    display: flex;
+    justify-content: center; /* Horizontally center the content */
+    align-items: center; /* Vertically center the content (optional) */
+    gap: 30px; /* Add some space between the image and text */
+}
+
+/* --- Media Queries for About Section --- */
+
+@media (max-width: 768px) {
+    .about-text-content {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .about-title-container {
+        width: 100%;
+    }
+    .about-title-container::before,  .about-title-container::after{
+         transition: all 0.3s cubic-bezier(0.25, 0.1, 0.25, 1);
+    }
+
+    .about-text-left,
+    .about-text-right {
+        width: 100%;
+    }
+}
+.about-text-content {
+    display: grid;
+    grid-template-columns: 1.5fr 1fr; /* Left column twice as wide as right */
+    gap: 40px;
+    align-items: start; /* Or center, flex-start, flex-end */
+}
+
+@media (max-width: 768px) {
+    .about-text-content {
+        grid-template-columns: 1fr; /* Single column on smaller screens */
+    }
+
+    .about-text-left img{
+        width:300px;
+    }
+}
+
+
+/* --- Contact Section --- */
+
+
+.contact-text h2 {
+    font-size: 2.5em;
+    margin: 0;
+    font-family: 'Fjalla One', sans-serif;
+    color: var(--highlight-text-color);
+    flex-shrink: 0;
+    position: relative; /*  Important for absolute positioning */
+    z-index: 2;      /* Place the text ABOVE the circle */
+    transition: color 0.3s ease; /* Existing transition for color change */
+}
+#contact {
+    padding: 55px 20px;
+    background-color: var(--contact-bg-color);    width: 100%;
+    box-sizing: border-box;
+}
+
+.contact-container {
+    padding-top: 10px; /* Adjust based on header height */
+    background-color: var(--contact-bg-color);
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.contact-text {
+    display: flex;
+    flex-direction: column;
+}
+
+.contact-title-container {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 30px;
+    width: 100%;
+    cursor: pointer;
+}
+
+
+
+
+
+
+.contact-title-container:hover h2 {
+    color: var(--highlight-text-color);
+}
+
+.horizontal-line {
+    flex-grow: 1;
+    height: 2px;        /*  Line height */
+    background-color: transparent; /* No background on main element */
+    position: relative;   /*  For pseudo-element positioning */
+    overflow: visible;    /*  Allow arrow to overflow */
+}
+
+/* Thin Dark Gray Line (::before) */
+.horizontal-line::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: #333; /* Dark gray */
+    transform: translateY(-50%);
+    transition: width 0.3s ease;
+    z-index: 1;
+}
+
+/* Thick Yellow Segment (::after) */
+.horizontal-line::after {
+    content: '';
+    position: absolute;
+    top: 0;          /* Align to top */
+    right: 0;
+    width: 75px;     /* Initial width */
+    height: 100%;     /* Fill container height */
+    background-color: #c7371c; /* Yellow */
+    transition: transform 0.3s ease, opacity 0.3s ease;  /*  Slide and fade */
+    transform-origin: right center;  /*  Slide from the right */
+    z-index: 2;
+    
+    ;
+}
+
+
+.contact-title-container::before{
+	top: 0; /*correct positioning*/
+}
+
+.contact-title-container::after{
+	top: calc(100% - 2px);/*correct positioning*/
+}
+/* --- Hover Styles --- */
+
+/* Shrink Dark Gray Line */
+.contact-title-container:hover .horizontal-line::before {
+    width: calc(100% - 106px); /*  Precise shrinking */
+    transition: all 0.3s cubic-bezier(0.25, 0.1, 0.25, 1); /* Smooth transitions */
+
+}
+
+/* Slide and Hide Thick Yellow Segment */
+.contact-title-container:hover .horizontal-line::after {
+    width: calc(100% - 450px); /*  Precise shrinking */
+    -webkit-font-smoothing: antialiased;
+    transition: all 0.3s cubic-bezier(0.25, 0.1, 0.25, 1); /* Smooth transitions */
+
+    opacity: 100;                /* Fade out */
+}
+
+
+
+
+/* Basic form styling */
+#contact-form {
+    width: 100%;
+    max-width: 600px; /* Or whatever width you want */
+    margin: 0 auto; /* Center the form */
+}
+
+.form-group {
+    margin-bottom: 1rem; /* Spacing between fields */
+}
+
+label {
+    display: block; /* Labels on their own line */
+    margin-bottom: 0.25rem;
+    font-weight: bold;
+}
+
+input[type="text"],
+input[type="email"],
+textarea {
+    width: 100%;
+    padding: 0.5rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box; /* Include padding and border in the width */
+    font-size: 1rem;
+}
+
+textarea {
+    resize: vertical; /* Allow vertical resizing */
+}
+
+button[type="submit"] {
+    background-color: #EF4523; /* Example button color */
+    color: rgb(255, 255, 255);
+    padding: 0.5rem 1rem;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 1rem;
+}
+
+button[type="submit"]:hover {
+    background-color: #a12d16; /* Darker on hover */
+}
+
+#form-messages {
+    margin-top: 1rem;
+    padding: 0.5rem;
+    border-radius: 4px;
+}
+
+.success {
+    background-color: #d4edda;
+    border-color: #c3e6cb;
+    color: #155724;
+}
+
+.error {
+    background-color: #f8d7da;
+    border-color: #f5c6cb;
+    color: #721c24;
+}
+
+
+
+
+
+
+    
+
+
+
+
+
+
+
+
+
+    
+/* --- Project Detail Page Styles --- */
+
+
+#project-detail {
+    max-width: 1560px;
+    margin: 0 auto;
+    padding: 20px;
+    box-sizing: border-box;}
+    /* Overlay for noise - CHANGED */
+#project-detail::before {
+    pointer-events: none; /* Add this line */
+    content: '';
+    position: fixed;
+    top: -50%;
+    left: -50%;
+    right: -50%;
+    bottom: -50%;
+    width: 200%;
+    height: 200vh;
+    background: transparent url('Images/Textures/noise-transparent.png') repeat 0 0;
+    background-repeat: repeat;
+    animation: bg-animation .2s infinite;
+    opacity: 1;
+    visibility: visible;
+    z-index: 999;
+}
+
+
+/* --- Project Header --- */
+/*Removed*/
+
+/* --- Hero Section (Two Columns + Rectangle Below) --- */
+
+.project-hero-section {
+    display: flex;
+    gap: 40px;          /* Space between columns */
+    margin-bottom: 40px;  /* Space below the entire section */
+    flex-wrap: wrap;     /* Wrap on smaller screens */
+	 justify-content: center; /* Center the boxes horizontally */
+}
+
+
+
+.project-hero-label-box {
+    background-color: #FFFF00; /* Yellow background */
+    color: black;             /* Black text */
+    padding: 5px 15px;       /* Padding around the text */
+    border-radius: 20px;      /* Rounded corners */
+    display: inline-block;   /* Important for sizing and margins */
+    font-size: 0.8em;       /* Slightly smaller font */
+    text-transform: uppercase;/* Keep uppercase */
+    font-family: 'Unbounded', sans-serif; /* Your chosen font */
+    font-weight: 400;
+    margin-bottom: 1rem;     /* Space below the label */
+}
+
+.project-hero-label{
+   display: none; /*Added this to remove the p tag*/
+}
+
+.project-hero-left {
+   width: 740px;        /* Set fixed width */
+   height: 680px;       /* Set fixed height */
+   background-color: var(--project-hero-bg-color);	 
+   padding: 30px;
+    border-radius: 30px;  /* Rounded corners */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start; /* Align items to the LEFT */
+    text-align: left;       /* Align TEXT to the left */
+	 color: white;
+     flex:1;/* Allow it to grow and shrink */
+     position: relative; /* Allow absolute positioning within */
+     flex: 1;
+  min-width: 300px; /* Prevents squeezing on very small screens */
+  margin-right: 20px; /* Space between left and right sections */
+
+}
+
+
+
+
+  .project-hero-left svg {
+    position: absolute;
+        top: 80.5px; /* Adjust position as needed */
+        left: 30px;
+        width: 100px; /* Adjust size as needed */
+        height: 100px;
+    
+  }
+  
+  .project-hero-left .cls-1 {
+    fill: none;
+    stroke: var(--icon-color);
+    stroke-miterlimit: 10;
+    stroke-width: 5px;
+    stroke-dasharray: 1900; /* Replace with your path's length */
+    stroke-dashoffset: 2000;
+   animation: draw 2s ease forwards; /* Apply the animation */
+    animation-fill-mode: both; /* Add this line */
+    animation-iteration-count: infinite; /* Add this line */
+  }
+  
+
+  .project-hero-left .st0 {
+    fill: none;
+    stroke: var(--icon-color);
+    stroke-miterlimit: 10;
+    stroke-width: 5px;
+    stroke-dasharray: 1900; /* Replace with your path's length */
+    stroke-dashoffset: 2000;
+   animation: draw 2s ease forwards; /* Apply the animation */
+    animation-fill-mode: both; /* Add this line */
+    animation-iteration-count: infinite; /* Add this line */
+    margin-top: 100px;
+  }
+  
+  .project-hero-left .st1 {
+    fill: none;
+    stroke: var(--icon-color);
+    stroke-miterlimit: 10;
+    stroke-width: 5px;
+    stroke-dasharray: 1900; /* Replace with your path's length */
+    stroke-dashoffset: 2000;
+   animation: draw 2s ease forwards; /* Apply the animation */
+    animation-fill-mode: both; /* Add this line */
+    animation-iteration-count: infinite; /* Add this line */
+    margin-top: 100px;
+  }
+
+  .project-hero-left .sts {
+    fill: none;
+    stroke: var(--icon-color);
+    stroke-miterlimit: 10;
+    stroke-width: 5px;
+    stroke-dasharray: 1900; /* Replace with your path's length */
+    stroke-dashoffset: 2000;
+   animation: draw 2s ease forwards; /* Apply the animation */
+    animation-fill-mode: both; /* Add this line */
+    animation-iteration-count: infinite; /* Add this line */
+    margin-top: 100px;
+  }
+
+  @keyframes draw {
+    to {
+      stroke-dashoffset: 10; /* Animate the stroke-dashoffset */
+    }
+  }
+
+
+
+ .project-hero-text h1{ /*Changed the name of h1*/
+     font-size: 3em;
+    font-family: 'Oswald', sans-serif; /* Use Oswald */
+    color: white;
+    margin-bottom: 0;       /* Reset any default bottom margin */
+	 line-height: 1.2;
+}
+
+
+.project-hero-right {
+    width: 740px; /* Fixed width */
+    height: 680px; /* Fixed height */
+    border-radius: 30px; /* Rounded Corners */
+    overflow: hidden;   /* Ensure image respects rounded corners */
+    background-color: #333; /* Placeholder in case of no image*/
+}
+
+.project-hero-image img {
+    width: 100%;
+    height: auto;  /* Maintain aspect ratio */
+    display: block;
+     /*transform: rotate(-7deg);  Apply rotation to the image itself */
+}
+
+@media (max-width: 768px) {
+    .project-hero-section {
+        flex-direction: row; /* Stack vertically on mobile */
+        width:10vh;
+    }
+
+    .project-hero-left, .project-hero-right {
+        /* Optional: Add some spacing on mobile */
+        margin-bottom: 20px; 
+    }
+
+
+
+}
+
+.project-intro{
+	 background-color: var(--project-hero-bg-color);
+	 color: #ccc;
+    width: 100%;
+    padding: 30px;
+    border-radius: 30px; /* Match other rounded corners */
+    margin-bottom: 40px;
+    margin-top: 40px;
+     text-align: center; /* Center the intro text */
+	display: flex;        /* NEW: for vertical centering */
+    flex-direction: column; /* NEW: stack content vertically */
+    justify-content: center;
+    padding: 20 20px 40px 20px; /* Padding for the intro section */
+    line-height: 1.6;
+}
+.project-intro p{
+	padding: 40px;
+	font-size: 1.2em; /* Increased font size */
+	line-height: 1.6; 
+    font-family: 'Open Sans', sans-serif; 
+    font-size: x-large;
+    color: var(--project-para-color) !important;
+}
+
+/* --- Project Info (Horizontal Layout) --- */
+
+.project-details-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* Creates four equal-width columns */
+    gap: 20px; /* Adjust spacing between items */
+    justify-content: center; /* Centers the items horizontally within the container */
+    margin-bottom: 150px; /* Add space below the section */
+    text-align: center;
+}
+
+.detail-title {
+    font-weight: bold;
+    text-transform: uppercase;
+    color: #ccc; /* Example of a slightly darker color */
+    justify-content: center;
+}
+
+
+
+
+
+
+
+
+/* --- Other Project Detail Styles (from previous responses) --- */
+
+.project-section {
+    padding: 40px 20px; /* Add padding around each section */
+    margin-bottom: 40px; /* Space between sections */
+    /* Optional: Add a background color if you want */
+    /* background-color: #1a1a1a; */
+}
+
+.project-hero-section {
+  display: flex;
+  flex-wrap: wrap; /* Allows wrapping on smaller screens */
+  justify-content: space-between;
+  align-items: center;
+  padding: 40px 20px;
+  margin-bottom: 40px;
+}
+
+
+.project-hero-label-box {
+  display: inline-block;
+  background-color: #FFFF00;
+  color: #000000;
+  padding: 5px 10px;
+  margin-bottom: 10px;
+  font-family: 'Oswald', sans-serif;
+  text-transform: uppercase;
+  font-size: large;
+}
+
+.project-hero-left h1{
+    font-family: 'Fjalla One', sans-serif;
+    font-size: clamp(2rem, 5vw, 4rem); /*Responsive Font Size */
+    color: var(--project-main-text-color);     
+    line-height: 1.2;
+}
+
+.project-hero-right {
+  flex: 1;
+  min-width: 300px; /* Prevents squeezing on very small screens */
+  text-align: center; /* Center the image */
+  overflow: hidden; /* Hide any part of the image that overflows */
+  width: 740px; /* Fixed width */
+  height: 680px; /* Fixed height */
+  border-radius: 30px; /* Rounded Corners */
+  overflow: hidden;   /* Ensure image respects rounded corners */
+  background-color: #333; /* Placeholder in case of no image*/
+}
+
+.project-hero-right img {
+  max-width: 100%; /* Ensures image doesn't overflow its container */
+  height: auto;
+  display: block; /* Removes extra space below inline elements */
+  border-radius: 20px;
+  object-fit: cover;
+
+}
+
+
+.project-details-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Responsive columns */
+  gap: 20px;
+  padding: 40px 20px;
+  margin-bottom: 40px;
+  
+}
+.project-details-grid h3{
+    margin-bottom: 1rem;
+    font-family: 'Fjalla One', sans-serif;
+    color: #909090;
+
+}
+
+.detail-title {
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+/* --- Responsive adjustments --- */
+@media screen and (max-width: 768px) {
+    .project-hero-section{
+        flex-direction: row;
+        min-height: ;
+    }
+}
+
+@media screen and (max-width: 768px) {
+
+    .project-hero-section {
+        display: column;
+        flex-wrap: wrap; /* Allows wrapping on smaller screens */
+        justify-content: space-between;
+        align-items: center;
+        padding: 40px 20px;
+        margin-bottom: 0px;
+        width:100%;
+      }
+      
+    
+    .project-hero-right     {
+    flex: 1;
+    min-width: 300px; /* Prevents squeezing on very small screens */
+    text-align: center; /* Center the image */
+    overflow: hidden; /* Hide any part of the image that overflows */
+    width: 100%; /* Fixed width */
+    height: 300px; /* Fixed height */
+    border-radius: 30px; /* Rounded Corners */
+    overflow: hidden;   /* Ensure image respects rounded corners */
+    background-color: #333; /* Placeholder in case of no image*/
+    margin-bottom: 0px;;
+  }
+
+  .project-hero-left svg {
+    position: absolute;
+    top: 56.5px; /* Adjust position as needed */
+        left: 30px;
+        width: 100px; /* Adjust size as needed */
+        height: 100px;
+    
+  }
+
+  .project-hero-left {
+    width: 100%;        /* Set fixed width */
+    height: 402px;       /* Set fixed height */
+     background-color: rgb(35, 35, 35); /* Dark gray background */
+     padding: 30px;
+     padding-top: 188.5px;
+     border-radius: 30px;  /* Rounded corners */
+     display: flex;
+     flex-direction: column;
+     justify-content: center;
+     align-items: flex-start; /* Align items to the LEFT */
+     text-align: left;       /* Align TEXT to the left */
+      color: white;
+      flex:1;/* Allow it to grow and shrink */
+      position: relative; /* Allow absolute positioning within */
+      flex: 1;
+   min-width: 300px; /* Prevents squeezing on very small screens */
+   margin-right: 0px; /* Space between left and right sections */
+   margin-bottom: 0px;
+  }
+ 
+ }
+
+ .project-intro {
+    padding: 0px;
+    line-height: 1.6;
+    height:fit-content;
+    flex:1;
+    min-width: 300px; /* Prevents squeezing on very small screens */
+    width:100%;
+    font-size: large;
+    justify-content: center;
+    margin:0px;
+   
+    ;
+
+  }
+
+  .project-intro p{
+	padding: 30px;
+	font-size: 1.2em; /* Increased font size */
+	line-height: 1.6; 
+    font-family: 'Open Sans', sans-serif; 
+    font-size: large;
+}
+
+
+
+
+.challenge-project  {
+    display: flex;
+    flex-wrap: wrap; /* Allows wrapping on smaller screens */
+    justify-content: space-between;
+    align-items: center;
+   /* padding: 40px 20px 20px;*/
+    margin-bottom: 40px;
+  }
+  
+  .challenge-project .challenge-project-chef {
+    display: flex;
+    flex-wrap: wrap; /* Allows wrapping on smaller screens */
+    justify-content: space-between;
+    align-items: center;
+   /* padding: 40px 20px 20px;*/
+    margin-bottom: 40px;
+  }
+  
+
+  .challenge-project-left {
+    flex: 1;
+    min-width: 300px; /* Prevents squeezing on very small screens */
+    margin-right: 20px; /* Space between left and right sections */
+    width: 740px;
+  height: 680px;
+    background-color: var(--project-hero-bg-color);
+    padding: 30px;
+  border-radius: 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  text-align: left;
+  color: white;
+  /*background-image: url(Images/BitcoinWell/1x/Asset\ 1-8.png);
+  background-position: -200px 150px;
+    background-repeat: no-repeat; /* Prevent image repeating */
+  background-size: cover; /* Cover the whole container */
+  opacity: 1; /* Adjust opacity here */
+  }
+  
+  
+  .challenge-project-label-box {
+    display: inline-block;
+    background-color: #ffffff00;
+    color: var(--project-title-text-color);     
+    padding: 5px 0px;
+    margin-bottom: 10px;
+    font-family: 'Oswald', sans-serif;
+    text-transform: uppercase;
+    font-size: xx-large;
+    
+  }
+  
+  .challenge-project-left {
+    font-family: 'Open Sans', sans-serif; 
+          font-size:x-large; /*Responsive Font Size */
+          color: var(--project-para-color) !important;
+          line-height: 1.2;
+      position: relative; /* Allow absolute positioning within */
+    }
+
+    .challenge-project-left svg {
+        position: absolute;
+        top: 115.5px; /* Adjust position as needed */
+        left: 30px;
+        width: 100px; /* Adjust size as needed */
+        height: 100px;
+      }
+      
+      .challenge-project-left .cls-1 {
+        fill: none;
+        stroke: #fff;
+        stroke-miterlimit: 10;
+        stroke-width: 5px;
+        stroke-dasharray: 1900; /* Replace with your path's length */
+        stroke-dashoffset: 2000;
+       animation: draw 2s ease forwards; /* Apply the animation */
+        animation-fill-mode: both; /* Add this line */
+        animation-iteration-count: infinite; /* Add this line */
+      }
+      
+      @keyframes draw {
+        to {
+          stroke-dashoffset: 0; /* Animate the stroke-dashoffset */
+        }
+      }
+      
+  
+      .challenge-project-chef .challenge-project-right  {
+    flex: 1;
+    text-align: center; /* Center the image */
+    background: url(.images/ChefInRes/poster_BG.jpg);
+    background-size: cover;
+    position: relative;
+    border-radius: 20px;
+    
+
+
+  }
+  
+  .challenge-project-chef .challenge-project-right img {
+    width: 760px; /* Ensures image doesn't overflow its container */
+    height: 680px;
+    display: block; /* Removes extra space below inline elements */
+    border-radius: 20px;
+    object-fit: cover;
+    transform-origin: 50% 50%;
+    opacity:100%;
+
+  }
+
+
+  .expandable-image {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(1.2); /* Adjust scale as needed */
+    max-width: 90vw;  /* Limit size to viewport */
+    max-height: 90vh;
+    z-index: 1000;     /* Higher than the overlay */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5); /* Add a shadow */
+    pointer-events: auto; /* Allow clicks on the expanded image*/
+    opacity: 100%;
+
+}
+
+.expandable-image-chef {
+    cursor: pointer; /* Indicate that the image is clickable */
+    transition: transform 0.3s ease; /* Add a smooth transition for the expansion */
+    opacity: 100%;
+}
+
+.challenge-project-chef .challenge-project-right img.expandable-image.expanded {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(1.2); /* Adjust scale as needed */
+    max-width: 90vw;  /* Limit size to viewport */
+    max-height: 90vh;
+    z-index: 1000;     /* Higher than the overlay */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5); /* Add a shadow */
+    pointer-events: auto; /* Allow clicks on the expanded image*/
+    opacity: 100%;
+
+}
+
+
+
+.challenge-project-chef .challenge-project-right:hover {
+    transform: scale(1.05); /* Expand on hover */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add shadow on hover */
+    transition: transform 0.2s ease-in-out;
+
+}
+
+
+.challenge-project-chef .challenge-project-right .expand-icon:hover {
+    color: #f0f003; /* Example: Change to yellow on hover */
+    transform: scale(1.5); /* Expand on hover */
+}
+
+/* Optional: Add a background overlay */
+.expandable-image.expanded + .overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    z-index: 100;
+}
+
+
+
+.challenge-project-right video {
+    /* ... other styles for the video ... */
+    object-fit: cover; /* Crop the video to fit the container */
+}
+
+
+
+  .challenge-project-right {
+    flex: 1;
+    text-align: center; /* Center the image */
+    background: url(images/ChefInRes/poster_BG.jpg)
+    position: relative;
+    ;
+
+  }
+  
+  .challenge-project-right img {
+    width: 760px; /* Ensures image doesn't overflow its container */
+    height: 680px;
+    display: block; /* Removes extra space below inline elements */
+    border-radius: 20px;
+    object-fit: cover;
+    transform-origin: 50% 50%;
+    transition: transform 0.2s ease-in-out;
+
+  }
+
+
+  .expandable-image {
+    cursor: pointer; /* Indicate that the image is clickable */
+    transition: transform 0.3s ease; /* Add a smooth transition for the expansion */
+}
+
+.challenge-project-right img.expandable-image.expanded {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); /* Center the image */
+
+    width: auto; /* Allow the image to scale down to fit */
+    height: 83vh;
+    z-index: 200; /* Ensure it's on top */
+    transition: transform 0.2s ease-in-out;
+
+}
+
+.challenge-project-chef .challenge-project-right img.expandable-image.expanded {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); /* Center the image */
+
+    width: auto; /* Allow the image to scale down to fit */
+    height: 83vh;
+    z-index: 200; /* Ensure it's on top */
+    transition: transform 0.2s ease-in-out;
+
+}
+
+.challenge-project-right .expand-icon {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 20px;
+    color: white;
+    z-index: 101; /* Ensure it's on top of the image */
+    cursor: pointer; /* Indicate that it's clickable */
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    transition: transform 0.2s ease-in-out;
+}
+
+
+
+.challenge-project-right img:hover {
+    transform: scale(1.05); /* Expand on hover */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add shadow on hover */
+}
+.challenge-project-right .expand-icon:hover {
+    color: #f0f003; /* Example: Change to yellow on hover */
+    transform: scale(1.5); /* Expand on hover */
+}
+
+
+
+  /* --- Responsive adjustments --- */
+  @media screen and (max-width: 768px) {
+    .challenge-project  {
+        display: flex;
+        flex-wrap: wrap; /* Allows wrapping on smaller screens */
+        justify-content: space-between;
+        align-items: center;
+       /* padding: 40px 20px 20px;*/
+        margin-bottom: 20px;
+      }
+
+    .challenge-project .challenge-project-chef {
+        display: flex;
+        flex-wrap: wrap; /* Allows wrapping on smaller screens */
+        justify-content: space-between;
+        align-items: center;
+       /* padding: 40px 20px 20px;*/
+        margin-bottom: 1px;
+        flex-direction: column;
+      }
+
+
+      .challenge-project-chef .challenge-project-right {width:100%;
+        flex: 1;
+    height:300px;
+margin-bottom: 20px;}
+
+
+      .challenge-project-chef .challenge-project-right img {
+        width: 300px; /* Ensures image doesn't overflow its container */
+        height: 300px;
+        display: block; /* Removes extra space below inline elements */
+        border-radius: 20px;
+        object-fit: cover;
+        transform-origin: 50% 50%;
+    margin-bottom: 20px;;
+      }
+
+
+
+        .challenge-project-right img {
+            width: 100%; /* Ensures image doesn't overflow its container */
+            height: 300px;
+            display: block; /* Removes extra space below inline elements */
+            border-radius: 20px;
+            object-fit: cover;
+            transform-origin: 50% 50%;
+            padding-left: 1px;
+        
+          }
+
+          .challenge-project-left {
+            font-family: 'Open Sans', sans-serif; 
+                  font-size:large; /*Responsive Font Size */
+              color: #ccc;
+              line-height: 1.2;
+              position: relative; /* Allow absolute positioning within */
+              min-width: 300px;
+              width: 100%;
+              margin-bottom:20px;
+              text-align: left; /* Center the image */;
+              margin-right: 0px;
+              height:auto;
+            }
+
+
+
+
+            .challenge-project-chef {
+                display: flex;
+                flex-wrap: wrap; /* Allows wrapping on smaller screens */
+                justify-content: space-between;
+                align-items: center;
+               /* padding: 40px 20px 20px;*/
+                margin-bottom: 1px;
+                flex-direction: column;
+              }
+        
+        
+         
+        
+                .challenge-project-chef-right img {
+                    width: 100%; /* Ensures image doesn't overflow its container */
+                    height: auto;
+                    display: block; /* Removes extra space below inline elements */
+                    border-radius: 20px;
+                    object-fit: cover;
+                    transform-origin: 50% 50%;
+                    padding-left: 1px;
+                
+                  }
+        
+                  .challenge-project-chef-left {
+                    font-family: 'Open Sans', sans-serif; 
+                          font-size:large; /*Responsive Font Size */
+                      color: #ccc;
+                      line-height: 1.2;
+                      position: relative; /* Allow absolute positioning within */
+                      min-width: 300px;
+                      width: 100%;
+                      margin-bottom:20px;
+                      text-align: left; /* Center the image */;
+                      margin-right: 0px;
+                    }
+
+
+.challenge-project-right {
+    flex: 1;
+    min-width: 300px;
+    text-align: center;
+    overflow: hidden;
+    width: 100%;
+    height: 300px;
+    border-radius: 30px;
+    overflow: hidden;
+    background-color: #333;
+    margin-bottom: 0px;
+            
+            }
+        }
+    
+
+
+
+
+
+
+
+
+
+
+
+
+/* --- GOAL --- */
+
+
+
+.project-goal{
+    background-color: var(--project-hero-bg-color);
+        color: #ccc;
+   width: 100%;
+   padding: 30px;
+   border-radius: 30px; /* Match other rounded corners */
+   margin-bottom: 40px;
+   margin-top: 40px;
+   display: flex;        /* NEW: for vertical centering */
+   flex-direction: column; /* NEW: stack content vertically */
+   justify-content: center;
+   
+
+
+}
+
+.project-goal-title {
+    font-family: 'Oswald', sans-serif;
+    font-size: xx-large; /*Responsive Font Size */
+    color: var(--project-title-text-color);     
+    line-height: 1.2;
+    text-align: center; /* Center the intro text */
+
+    
+  }
+.project-goal p{
+    font-family: 'Open Sans', sans-serif; 
+        font-size: x-large;
+        color: var(--project-para-color) !important;
+        line-height: 1.2;
+    padding-top: 10px;
+    text-align: center; /* Center the intro text */
+    padding-left: 80px;
+    padding-right: 80px;
+
+}
+
+.project-goal ul {
+    list-style: ; /* Remove default bullet points */
+    padding-left: 50px; /* Remove default padding */
+    font-family: 'Open Sans', sans-serif; 
+        font-size: x-large;
+        color: var(--project-para-color) !important;
+    line-height: 1.2;
+    padding-top: 10px;
+    padding-left: 150px;
+    padding-right: 150px;
+  }
+  
+  .project-goal li {
+    margin-bottom: 10px; /* Add spacing between list items */
+  }
+
+
+
+
+
+  @media screen and (max-width: 768px) {
+
+    .project-goal{
+        background-color:  #232323; /* Changed intro background color */
+        color: #ccc;
+       width: 100%;
+       padding: 30px;
+       border-radius: 30px; /* Match other rounded corners */
+       margin-bottom: 20px;
+       margin-top: 0px;
+       display: flex;        /* NEW: for vertical centering */
+       flex-direction: column; /* NEW: stack content vertically */
+       justify-content: center;       
+    
+    
+    }
+    .project-goal p{
+        font-family: 'Open Sans', sans-serif; 
+            font-size:large;
+        color: #ccc;
+        line-height: 1.2;
+        padding-top: 10px;
+        text-align: left; /* Center the intro text */
+        padding-left: 10px;
+        padding-right: 10px;
+    
+    }
+
+    .project-goal ul {
+        list-style: ; /* Remove default bullet points */
+        padding-left: 50px; /* Remove default padding */
+        font-family: 'Open Sans', sans-serif; 
+            font-size: large;
+        color: #ccc;
+        line-height: 1.2;
+        padding-top: 10px;
+        padding-left: 15px;
+        padding-right: 15px;
+      }
+
+
+  }
+
+
+/* --- SOLUTION --- */
+
+.solution-project {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: flex-start;
+    /*padding: 20px 20px 20px;*/
+    margin-bottom: 40px;
+}
+
+
+.solution-project-left {
+    width: 755px;
+    height: 680px;
+    text-align: center;
+    cursor: pointer;
+    overflow: hidden;
+    /*margin-right: 20px;*/
+    background-color: rgb(35, 35, 35);
+    border-radius: 30px;
+    display: flex;
+    flex-direction: row; /* Arrange images horizontally */
+    align-items: center;
+    justify-content: center;
+    gap: 7px; /* Space between images */
+    padding: 20px; /* Space around images */
+    transition: transform 0.3s ease;
+    position: relative;
+    background-image: url(Images/BitcoinWell/concrete_Background.jpg);
+}
+
+.solution-project-left img { /* Style the images directly */
+    display: block; /* Make them block-level elements */
+    width: 50%; /* Adjust this value to control image size */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Add transitions */
+    object-position: top;
+    object-fit: contain;
+      position: relative; /* To position the icons relative to the image */
+}
+
+.solution-project-left img:hover {
+    transform: scale(1.1); /* Expand on hover */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add shadow on hover */
+}
+
+.solution-project-left img.expanded { /* Styles for expanded state */
+    position: fixed;
+    left: 50%;      /* Center horizontally */
+    top: 50%;       /* Center vertically */
+    transform: translate(-50%, -50%); /* Adjust position */
+    width: 90%;
+    height: 90%;
+    object-fit: contain;
+    z-index: 100;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0); /* Add shadow on hover */
+
+}
+
+.solution-project-left img.expanded + .overlay { /* Add overlay styles */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7); /* Darken background */
+    z-index: 99; /* Ensure it's behind the image */
+}
+.solution-project-right {
+    flex: 1;
+    min-width: 300px;
+    margin-left: 20px;
+    width: 740px;
+    height: 680px;
+    background-color: var(--project-hero-bg-color);
+    padding: 30px;
+    border-radius: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    text-align: left;
+    font-family: 'Open Sans', sans-serif; 
+    font-size: x-large;
+    color: var(--project-para-color) !important;
+    line-height: 1.2;
+}
+
+.solution-project-title {
+    display: inline-block;
+    background-color: #ffffff00;
+    color: var(--project-title-text-color);     
+    padding: 5px 0px;
+    margin-bottom: 10px;
+    font-family: 'Oswald', sans-serif;
+    text-transform: uppercase;
+    font-size: xx-large;
+}
+
+@media (max-width: 768px) {
+    
+    .solution-project-left {
+        width: 100%;
+        height: auto;
+        text-align: center;
+        cursor: pointer;
+        overflow: hidden;
+        /*margin-right: 20px;*/
+        background-color: rgb(35, 35, 35);
+        border-radius: 30px;
+        display: flex;
+        flex-direction: row; /* Arrange images horizontally */
+        align-items: center;
+        justify-content: center;
+        gap: 7px; /* Space between images */
+        padding: 20px; /* Space around images */
+        transition: transform 0.3s ease;
+        position: relative;
+        background-image: url(Images/BitcoinWell/concrete_Background.jpg);
+        margin-bottom: 20px;;
+    }
+    
+    .solution-project-left img { /* Style the images directly */
+        display: block; /* Make them block-level elements */
+        width: 60%; /* Adjust this value to control image size */
+        transition: transform 0.3s ease, box-shadow 0.3s ease; /* Add transitions */
+        object-position: top;
+        object-fit: contain;
+          position: relative; /* To position the icons relative to the image */
+    }
+
+    .solution-project-right {
+        flex: 1;
+        min-width: 300px;
+        margin-left: 0px;
+        width: 100%;
+        height: 680px;
+        background-color: rgb(35, 35, 35);
+        padding: 30px;
+        border-radius: 30px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+        text-align: left;
+        color: white;
+        font-family: 'Open Sans', sans-serif; 
+        font-size: large;
+        color: #ccc;
+        line-height: 1.2;
+    }
+}
+
+@media (max-width: 768px) {
+    .solution-project {
+        flex-direction: column;
+        margin-bottom: 0px;;
+    }
+
+    .solution-project-right {
+        width: 100%;
+        height: auto;
+        margin-right: 0;
+        margin-bottom: 20px;
+    }
+
+      
+    }
+
+
+
+
+
+
+
+/* --- SOLUTION Jiffy Lube --- */
+
+.solution-project-jiffy {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: flex-start;
+    /*padding: 20px 20px 20px;*/
+    margin-bottom: 40px;
+}
+
+
+.solution-project-jiffy-left {
+    width: 755px;
+    height: 680px;
+    text-align: center;
+    cursor: pointer;
+    overflow: hidden;
+    /*margin-right: 20px;*/
+    background-color:var(--project-hero-bg-color);
+    border-radius: 30px;
+    display: flex;
+    flex-direction: row; /* Arrange images horizontally */
+    align-items: center;
+    justify-content: center;
+    gap: 7px; /* Space between images */
+    padding: 20px; /* Space around images */
+    transition: transform 0.3s ease;
+    position: relative;
+    background-image: url(Images/JiffyLube/ice_surface.jpg);
+    background-size: cover;
+}
+
+.solution-project-jiffy-left img { /* Style the images directly */
+    display: block; /* Make them block-level elements */
+    width: 92.5%; /* Adjust this value to control image size */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Add transitions */
+    object-position: top;
+    object-fit: contain;
+      position: relative; /* To position the icons relative to the image */
+}
+
+.solution-project-jiffy-left img:hover {
+    transform: scale(1.1); /* Expand on hover */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add shadow on hover */
+}
+
+.solution-project-jiffy-left img.expanded { /* Styles for expanded state */
+    position: fixed;
+    left: 50%;      /* Center horizontally */
+    top: 50%;       /* Center vertically */
+    transform: translate(-50%, -50%); /* Adjust position */
+    width: 90%;
+    height: 90%;
+    object-fit: contain;
+    z-index: 100;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0); /* Add shadow on hover */
+
+}
+
+.solution-project-jiffy-left img.expanded + .overlay { /* Add overlay styles */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7); /* Darken background */
+    z-index: 99; /* Ensure it's behind the image */
+}
+
+.solution-project-jiffy-right {
+    flex: 1;
+    min-width: 300px;
+    margin-left: 20px;
+    width: 740px;
+    height: 680px;
+    background-color:var(--project-hero-bg-color);
+        padding: 30px;
+    border-radius: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    text-align: left;
+    font-family: 'Open Sans', sans-serif; 
+    font-size: x-large;
+    color:var(--project-para-color);
+    line-height: 1.2;
+}
+
+.solution-project-jiffy-title {
+    display: inline-block;
+    background-color: #ffffff00;
+    color: var(--project-title-text-color);
+    padding: 5px 0px;
+    margin-bottom: 10px;
+    font-family: 'Oswald', sans-serif;
+    text-transform: uppercase;
+    font-size: xx-large;
+}
+
+@media (max-width: 768px) {
+
+
+    .solution-project-jiffy-left {
+        width: 100%;
+        height: 300px;
+        text-align: center;
+        cursor: pointer;
+        overflow: hidden;
+        /*margin-right: 20px;*/
+        background-color: rgb(35, 35, 35);
+        border-radius: 30px;
+        display: flex;
+        flex-direction: row; /* Arrange images horizontally */
+        align-items: center;
+        justify-content: center;
+        gap: 7px; /* Space between images */
+        padding: 20px; /* Space around images */
+        transition: transform 0.3s ease;
+        position: relative;
+        background-image: url(Images/JiffyLube/ice_surface.jpg);
+        background-size: cover;
+        margin-bottom: 20px;
+    }
+    
+
+    .solution-project-jiffy-right {
+        width: 100%;
+        height: auto;
+        margin-right: 0;
+        margin-bottom: 20px;
+        margin-left: 0px;
+    }
+
+
+@media (max-width: 768px) {
+    .solution-project-jiffy {
+        flex-direction: column;
+    }
+
+    .solution-project-jiffy-right {
+        width: 100%;
+        height: auto;
+        margin-right: 0;
+        margin-bottom: 20px;
+    }
+
+        margin-bottom: 0;
+    }}
+
+
+
+
+/* --- SOLUTION Trulioo --- */
+
+.solution-project-trulioo {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: flex-start;
+    /*padding: 20px 20px 20px;*/
+    margin-bottom: 40px;
+}
+
+
+.solution-project-trulioo-left {
+    width: 755px;
+    height: 680px;
+    text-align: center;
+    cursor: pointer;
+    overflow: hidden;
+    /*margin-right: 20px;*/
+    background-color: var(--project-hero-bg-color);
+    border-radius: 30px;
+    display: flex;
+    flex-direction: column; /* Arrange images horizontally */
+    align-items: center;
+    justify-content: center;
+    gap: 7px; /* Space between images */
+    padding: 20px; /* Space around images */
+    transition: transform 0.3s ease;
+    position: relative;
+}
+
+.solution-project-trulioo-left img { /* Style the images directly */
+    display: block; /* Make them block-level elements */
+    width: 70%; /* Adjust this value to control image size */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Add transitions */
+    object-position: top;
+    object-fit: contain;
+      position: relative; /* To position the icons relative to the image */
+}
+
+.solution-project-trulioo-left img:hover {
+    transform: scale(1.1); /* Expand on hover */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add shadow on hover */
+}
+
+.solution-project-trulioo-left img.expanded { /* Styles for expanded state */
+    position: fixed;
+    left: 50%;      /* Center horizontally */
+    top: 50%;       /* Center vertically */
+    transform: translate(-50%, -50%); /* Adjust position */
+    width: 90%;
+    height: 90%;
+    object-fit: contain;
+    z-index: 100;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0); /* Add shadow on hover */
+
+}
+
+.solution-project-trulioo-left img.expanded + .overlay { /* Add overlay styles */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7); /* Darken background */
+    z-index: 99; /* Ensure it's behind the image */
+}
+
+.solution-project-trulioo-right {
+    flex: 1;
+    min-width: 300px;
+    margin-left: 20px;
+    width: 740px;
+    height: 680px;
+    background-color: var(--project-hero-bg-color);
+    padding: 30px;
+    border-radius: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    text-align: left;
+    font-family: 'Open Sans', sans-serif; 
+    font-size: x-large;
+    color: var(--project-para-color);
+    line-height: 1.2;
+}
+
+.solution-project-trulioo-title {
+    display: inline-block;
+    background-color: #ffffff00;
+    color: var(--project-title-text-color);
+    padding: 5px 0px;
+    margin-bottom: 10px;
+    font-family: 'Oswald', sans-serif;
+    text-transform: uppercase;
+    font-size: xx-large;
+}
+
+
+@media (max-width: 768px) {
+
+    .solution-project-trulioo-right {
+        flex: 1;
+        min-width: 300px;
+        margin-left: 0px;
+        width: 100%;
+        height: auto;
+        background-color: rgb(35, 35, 35);
+        padding: 30px;
+        border-radius: 30px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+        text-align: left;
+        color: white;
+        font-family: 'Open Sans', sans-serif; 
+        font-size: large;
+        color: #ccc;
+        line-height: 1.2;
+        margin-top:20px;
+    }
+    
+    .solution-project-trulioo-left img { /* Style the images directly */
+        display: block; /* Make them block-level elements */
+        width: 100%; /* Adjust this value to control image size */
+        height:auto;
+        transition: transform 0.3s ease, box-shadow 0.3s ease; /* Add transitions */
+        object-position: top;
+        object-fit: contain;
+          position: relative; /* To position the icons relative to the image */
+    }
+
+    .solution-project-trulioo-left img.expanded { /* Styles for expanded state */
+        position: fixed;
+        left: 50%;      /* Center horizontally */
+        top: 90%;       /* Center vertically */
+        transform: translate(-50%, -50%); /* Adjust position */
+        width: 90%;
+        height: 90%;
+        object-fit: contain;
+        z-index: 100;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0); /* Add shadow on hover */
+
+    }
+
+
+}
+
+
+
+
+/* --- SOLUTION Chef --- */
+
+
+
+.solution-project-chef {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: flex-start;
+    /*padding: 20px 20px 20px;*/
+    margin-bottom: 40px;
+}
+
+
+
+
+.solution-project-chef-left {
+    width: 755px;
+    height: 680px;
+    text-align: center;
+    cursor: pointer;
+    overflow: hidden;
+    /*margin-right: 20px;*/
+    background-color: rgb(35, 35, 35);
+    border-radius: 30px;
+    display: flex;
+    flex-direction: row; /* Arrange images horizontally */
+    align-items: center;
+    justify-content: center;
+    gap: 7px; /* Space between images */
+    padding: 20px; /* Space around images */
+    transition: transform 0.3s ease;
+    position: relative;
+    background-image: url(Images/ChefInRes/bg.jpg);
+}
+
+.solution-project-chef-left img { /* Style the images directly */
+    display: block; /* Make them block-level elements */
+    width: 75%; /* Adjust this value to control image size */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Add transitions */
+    object-position: top;
+    object-fit: contain;
+      position: relative; /* To position the icons relative to the image */
+      border-radius: 30px;
+
+}
+
+.solution-project-chef-left img:hover {
+    transform: scale(1.1); /* Expand on hover */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add shadow on hover */
+}
+
+.solution-project-chef-left img.expanded { /* Styles for expanded state */
+    position: fixed;
+    left: 50%;      /* Center horizontally */
+    top: 50%;       /* Center vertically */
+    transform: translate(-50%, -50%); /* Adjust position */
+    width: 90%;
+    height: 90%;
+    object-fit: contain;
+    z-index: 100;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0); /* Add shadow on hover */
+
+}
+
+.solution-project-chef-left img.expanded + .overlay { /* Add overlay styles */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7); /* Darken background */
+    z-index: 99; /* Ensure it's behind the image */
+}
+
+.solution-project-chef-right {
+    flex: 1;
+    min-width: 300px;
+    margin-left: 20px;
+    width: 740px;
+    height: 680px;
+    background-color: var(--project-hero-bg-color);
+    padding: 30px;
+    border-radius: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    text-align: left;
+    font-family: 'Open Sans', sans-serif; 
+    font-size: x-large;
+    color: var(--project-para-color);
+    line-height: 1.2;
+}
+
+.solution-project-chef-title {
+    display: inline-block;
+    background-color: #ffffff00;
+    color:var(--project-title-text-color);
+    padding: 5px 0px;
+    margin-bottom: 10px;
+    font-family: 'Oswald', sans-serif;
+    text-transform: uppercase;
+    font-size: xx-large;
+}
+
+
+
+
+
+
+@media (max-width: 768px) {
+    
+    .solution-project-chef-left {
+        width: 100%;
+        height: 300px;
+        text-align: center;
+        cursor: pointer;
+        overflow: hidden;
+        /*margin-right: 20px;*/
+        background-color: rgb(35, 35, 35);
+        border-radius: 30px;
+        display: flex;
+        flex-direction: row; /* Arrange images horizontally */
+        align-items: center;
+        justify-content: center;
+        gap: 7px; /* Space between images */
+        padding: 20px; /* Space around images */
+        transition: transform 0.3s ease;
+        position: relative;
+        background-image: url(Images/ChefInRes/bg.jpg);
+        margin-bottom: 20px;;
+    }
+    
+    .solution-project-left img { /* Style the images directly */
+        display: block; /* Make them block-level elements */
+        width: 60%; /* Adjust this value to control image size */
+        transition: transform 0.3s ease, box-shadow 0.3s ease; /* Add transitions */
+        object-position: top;
+        object-fit: contain;
+          position: relative; /* To position the icons relative to the image */
+    }
+
+    .solution-project-right {
+        flex: 1;
+        min-width: 300px;
+        margin-left: 0px;
+        width: 100%;
+        height: 680px;
+        background-color: rgb(35, 35, 35);
+        padding: 30px;
+        border-radius: 30px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+        text-align: left;
+        color: white;
+        font-family: 'Open Sans', sans-serif; 
+        font-size: large;
+        color: #ccc;
+        line-height: 1.2;
+    }}
+
+
+@media (max-width: 768px) {
+    .solution-project {
+        flex-direction: column;
+    }
+
+    .solution-project-chef-right {
+        font-size: large;
+    }
+
+    .solution-project-right {
+        width: 100%;
+        height: auto;
+        margin-right: 0;
+        margin-bottom: 20px;
+    }
+
+       
+    
+
+    .solution-project-chef-right {
+        width: 100%;
+        height: auto;
+        margin-right: 0;
+        margin: 0px;
+    }
+    .grid-container {
+        display: grid;
+        grid-template-columns: ; /* Three equal-width columns */    
+        gap: 30px;
+        margin-bottom: 60px;
+        justify-content: center;
+        max-width: 1900px;
+        min-width: 300px;
+    }
+ 
+    
+    .carousel-item {
+        width: 300.3px;
+        flex-shrink: 1;
+        border-radius: 40px;
+        overflow: hidden;
+        margin-bottom: 20px;
+        position: relative;
+  
+}
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+  .project-video {
+    background-color:  #232323; /* Changed intro background color */
+    color: #ccc;
+   width: 100%;
+   padding: 0px;
+   border-radius: 30px; /* Match other rounded corners */
+   margin-bottom: 20px;
+   margin-top: 20px;
+   
+   display: flex;        /* NEW: for vertical centering */
+   flex-direction: column; /* NEW: stack content vertically */
+   justify-content: center;
+    overflow: hidden; /* Hide any part of the video that overflows */
+  }
+  
+  .project-video video {
+    /* ... other styles ... */
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* This is the key property */
+  }
+
+
+  #similar-projects {
+    display: flex;
+    justify-content: center; /* Center the content horizontally */}
+
+#view-more-projects {
+        /* Add styles specific to the "View More" section if needed */
+        margin-top: 40px; /* Example: Add some space above the section */
+    display:none;}
+    
+    
+    .horizontal-scroll-container {
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch; /* For smoother scrolling on mobile */
+        width: 100%;
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch; /* For smoother scrolling on mobile */
+        display: grid;                /* Use grid for the container */
+        grid-template-columns:     grid-template-columns: repeat(3, 350px); /* 3 columns of fixed width */
+        gap: 20px;                   /* Adjust gap as needed */
+        justify-content: center; /* Center the content horizontally */}
+
+    
+    
+    .horizontal-scroll-container::-webkit-scrollbar {
+        display: none; /* Hide the scrollbar */
+    }
+    .grid-container2{
+        display:flex;
+        gap:20px;
+    }
+    .scroll-button {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        background-color: rgba(0, 0, 0, 0.5);
+        color: white;
+        padding: 10px 15px;
+        border: none;
+        cursor: pointer;
+    }
+    
+    .scroll-button.prev {
+        left: 20px;
+    }
+    
+    .scroll-button.next {
+        right: 20px;
+    }
+    #view-more-projects .horizontal-scroll-container {
+    display: none;
+    transition: transform 0.3s ease; /* Add transition */
+}
+
+#view-more-projects .horizontal-scroll-container.show {
+    display: grid;
+    transform: translateX(0); /* Slide in from the right */
+}
+
+.view-more-button {
+    /* Add styles for the button */
+    display: block;
+    margin: 20px auto;
+    padding: 10px 20px;
+    background-color: #EF4523;
+    /* Example color */
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+.carousel {
+    width: 90%;
+    margin: 50px auto;
+    position: relative;
+}
+
+
+
+.carousel-track {
+    display: flex;
+    transition: transform 0.3s ease-in-out;
+    gap:20px;
+}
+
+.carousel-item {
+    width: 493.333px;
+    flex-shrink: 0;
+    border-radius: 40px;
+    overflow: hidden;
+    margin-bottom: 20px;
+    position:relative;
+}
+
+.carousel-container {
+    width: 100%;
+    overflow: hidden;
+    position: relative; /* Add this to position the pseudo-elements */
+}
+
+.carousel h2 {
+
+    margin-bottom:0px;
+    color: #FFFF00;
+}
+
+
+.carousel-container::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0; /* Start the gradient on the left */
+    width: 100px; /* Adjust the width of the fade effect */
+    height: 100%;
+    background: linear-gradient(to left, transparent, rgb(16, 16, 16)); /* Fade to black */
+    pointer-events: none; /* Prevent the gradient from blocking interactions */
+    z-index: 2;
+}
+
+.carousel-container::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0; /* Start the gradient on the right */
+    width: 100px; /* Adjust the width of the fade effect */
+    height: 100%;
+    background: linear-gradient(to right, transparent, rgb(16, 16, 16)); /* Fade to black */
+    pointer-events: none; /* Prevent the gradient from blocking interactions */
+}
+
+.carousel-item img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.carousel-button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+}
+
+.carousel-button {
+    position: absolute; /* Position the buttons absolutely within the carousel */
+    top: 50%;
+    transform: translateY(-50%); /* Center vertically */
+    background-color: #ef4523;
+    color: #FFFF00;
+    border: none;
+    border-radius: 50%;
+    padding: 10px 15px;
+    cursor: pointer;
+    display: block; /* Change display to block */
+}
+
+.carousel-button:hover {
+    background-color: #c7371c; /* Darken the background color on hover */
+    transform: translateY(-50%) scale(1.5); /* Slightly scale up the button */
+    transition: transform 0.2s ease-in-out; /* Add the transition property */
+    color: white; /* Change the text color on hover (optional) */
+}
+
+
+.carousel-button.prev {
+    left: 10px;
+    z-index: 5;
+}
+
+.carousel-button.next {
+    right: 10px;
+}
+
+/* --- grid lines 2 --- */
+.bg-grid-line2 {
+    width: 99%;
+    height: 900px;
+    overflow: hidden;
+    position: absolute; 
+    bottom: -90px;
+    z-index: -1; /* Place the grid behind the content */
+ 
+  overflow: hidden;
+  perspective: 450px;
+  position: absolute;
+}
+
+.bg-line2 {
+    width: 100%;
+    height: 100%;
+    perspective: 450px; 
+    transform: rotateX(50deg);
+    opacity:.07;
+    overflow: hidden;
+   
+    
+}
+
+.bg-line2::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 200%;
+    background-image: linear-gradient(to right,#fff 1px,transparent 0),linear-gradient(to bottom,#fff 1px,transparent 0);
+    background-size: 40px 40px;
+    background-repeat: repeat;
+    animation: playline1 35s linear infinite;
+
+    
+}
+
+@keyframes playline1 {
+    0% { transform: translateY(0); }
+    100% { transform: translateY(-50%); }
+}
+
+
+#portfolio-carousel {
+    position: relative;
+}
+
+#portfolio-carousel .portfolio-carousel-container {
+    position: relative;
+    display: flex;
+    overflow-x: hidden;
+    white-space: nowrap;
+    scroll-behavior: smooth;
+    gap: 20px;
+    overflow-y: hidden; /* Disable vertical scrolling */
+    padding-top: 20px;
+    padding-bottom: 20px;
+    
+}
+
+#portfolio-carousel .project-link {
+    flex: 0 0 calc(33.33% - 20px * 2 / 3);
+    max-width: calc(33.33% - 20px * 2 / 3);
+    box-sizing: border-box;
+    min-width: 300px;
+}
+
+
+
+    #portfolio-carousel .portfolio-carousel-container {
+        position: relative;
+        display: grid;
+        overflow-x: hidden;
+        white-space: nowrap;
+        scroll-behavior: smooth;
+        gap: 20px;
+        overflow-y: hidden; /* Disable vertical scrolling */
+        
+    }
+
+@media (max-width: 480px) { /* Adjust breakpoint as needed */
+    #portfolio-carousel .project-link {
+        flex: 0 0 95%; /* Adjust mobile width */
+        max-width: 95%; /* Adjust mobile width */
+    }
+    #portfolio-carousel .portfolio-carousel-container {
+        display: grid;
+        white-space: nowrap;
+        scroll-behavior: smooth;
+        gap: 20px;
+}   }
+
+
+
+#portfolio-carousel .portfolio-carousel-container::before,
+#portfolio-carousel .portfolio-carousel-container::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    height: 100%;
+    width: 50px;
+    pointer-events: none;
+}
+
+
+
+#portfolio-carousel .carousel-nav {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(255, 255, 255, 0.7);
+    border-radius: 50%;
+    cursor: pointer;
+    z-index: 1;
+}
+
+#portfolio-carousel .carousel-nav-left {
+    left: 10px;
+}
+
+#portfolio-carousel .carousel-nav-right {
+    right: 10px;
+}
+
+#portfolio-carousel .carousel-nav svg {
+    width: 24px;
+    height: 24px;
+    fill: #333;
+}
+
+#portfolio-carousel .portfolio-carousel-container {
+    display: flex;
+    white-space: nowrap;
+    scroll-behavior: smooth;
+    gap: 20px;
+}
+
+#portfolio-carousel .project-link {
+    flex: 0 0 calc(33.33% - 20px * 2 / 3);
+    max-width: calc(33.33% - 20px * 2 / 3);
+    box-sizing: border-box;
+}
+
+/* Apply gradients to the parent */
+#portfolio-carousel::before,
+#portfolio-carousel::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    height: 100%;
+    width: 50px; /* Adjust width as needed */
+    pointer-events: none;
+}
+
+#portfolio-carousel::before {
+    left: 0;
+    background: var(--viewmore-fade);
+    z-index: 10;
+}
+
+#portfolio-carousel::after {
+    right: 0;
+    background: var(--viewmore-fade2);
+}
+
+    #portfolio-carousel .portfolio-carousel-container img {
+        user-select: none;
+        pointer-events: none;
+    }
+
+    /* Replace .jotform-branding-class with the actual selector */
+.formFooter f6 branding21  {
+    display: none !important;
+}
+
+/* If the branding is an image, try this: */
+.branding21-image {
+    visibility: hidden !important;
+}
+
+.skip-link {
+    position: absolute;
+    left: -9999px;
+    top: auto;
+    z-index: 999;
+    background: white;
+    color: black;
+    padding: 0.5em;
+}
+
+.skip-link:focus {
+    left: 0;
+    top: 0;
+}
+
+/* --- CSS Variables --- */
+:root {
+    --bg-color: #0f0f0f; /* Default (Dark Mode) */
+    --text-color: #fff;
+    --header-bg-color: rgba(0, 0, 0, 0.7);
+    --grid-line-color: #fff;
+    --header-bg-color: rgba(0, 0, 0, 0.7); 
+    --highlight-text-color: #FFFF00; /* Default (Dark Mode) */
+    --highlight-text-color-blue: #154587; /* Default (Dark Mode) */
+    --marquee-bg-color: #FFFF00;
+    --marquee-text-color: #000; /* Default (Dark Mode) */
+    --marquee-icon-color: #EF4523; /* Default (Dark Mode) */
+    --nav-link-color: #fff;
+    --nav-link-active-color: #FFFF00;
+    --nav-link-hover-color: #FFFF00;
+    --project-hero-bg-color: rgb(35, 35, 35);
+    --project-title-text-color: #FFFF00;
+    --project-main-text-color: #ffffff;
+    --icon-color: white;
+    --project-para-color: white;
+    --viewmore-fade: linear-gradient(to left, transparent, #0f0f0f);
+    --viewmore-fade2: linear-gradient(to right, transparent, #0f0f0f);
+
+
+}
+  
+  /* --- Dark Mode (Default) --- */
+  body {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+  }
+  
+  header {
+    background-color: var(--header-bg-color);
+  }
+  
+  .bg-line::before {
+    background-image: linear-gradient(to right, var(--grid-line-color) 1px, transparent 0),
+      linear-gradient(to bottom, var(--grid-line-color) 1px, transparent 0);
+  }
+  
+  /* --- Light Mode --- */
+  body.light-mode {
+    --bg-color: floralwhite !important;
+    --text-color: #333;
+    --header-bg-color: #f04223ef;
+    --grid-line-color: #333;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    --highlight-text-color: #292929; /* Light Mode */  
+    --marquee-bg-color: #f04323;
+    --marquee-text-color: #ffffff; /* Light Mode */
+    --marquee-icon-color: #154587; /* Dark, almost black for icons in light mode */
+    --nav-link-color: floralwhite;
+    --nav-link-active-color: #f04323;
+    --hero-bg-color:floralwhite;
+    --project-hero-bg-color: rgb(225 225 225);
+    --project-title-text-color:#154587;
+    --icon-color: #f04323;
+    --project-para-color: rgb(29, 29, 29);
+    --viewmore-fade: linear-gradient(to left, transparent, floralwhite);
+    --viewmore-fade2: linear-gradient(to right, transparent, floralwhite);
+    --project-main-text-color: #154587;
+
+}
+  
+  body.light-mode header {
+    background-color: var(--header-bg-color);
+  }
+  
+  body.light-mode .bg-line::before {
+    background-image: linear-gradient(to right, var(--grid-line-color) 1px, transparent 0),
+      linear-gradient(to bottom, var(--grid-line-color) 1px, transparent 0);
+  }
+  
+  /* --- Toggle Switch Styling --- */
+  .theme-toggle-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.theme-switch {
+    display: inline-block;
+    position: relative;
+    width: 60px;
+    height: 30px;
+}
+
+.theme-switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #333; /* Dark mode background - initial */
+    transition: background-color 0.4s ease;
+    border-radius: 15px;
+    overflow: hidden; /* To contain stars */
+}
+
+.slider::before {
+    position: absolute;
+    content: "";
+    height: 24px;
+    width: 24px;
+    left: 3px;
+    bottom: 3px;
+    background-color: #EEE; /* Moon color - initial for dark mode */
+    transition: .4s;
+    border-radius: 50%;
+    box-shadow: 0 0 5px #EEE; /* Subtle glow */
+}
+
+input:checked + .slider {
+    background-color: #64b1ff; /* Light mode background */
+}
+
+input:checked + .slider::before {
+    transform: translateX(30px);
+    background-color: #FFD700; /* Sun color - changes for light mode */
+    box-shadow: 0 0 5px #FFD700; /* Subtle glow */
+}
+
+.slider.round {
+    border-radius: 15px;
+}
+
+.slider.round::before {
+    border-radius: 50%;
+}
+
+.toggle-icon {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    top: 5px;
+}
+
+.sun {
+    left: 5px;
+    opacity: 0; /* Initially hidden */
+    transition: opacity 0.4s ease;
+    /* You can add a simple sun graphic here if you want */
+}
+
+.moon {
+    right: 5px;
+    opacity: 1; /* Initially visible */
+    transition: opacity 0.4s ease;
+    /* You can add a simple moon graphic here if you want */
+}
+
+input:checked + .slider .sun {
+    opacity: 1;
+}
+
+input:checked + .slider .moon {
+    opacity: 0;
+}
+
+/* Star Styles */
+.stars-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none; /* Allows clicks on the slider */
+    opacity: 1; /* Visible in dark mode */
+    transition: opacity 0.4s ease;
+    z-index: 0; /* Ensure the stars are below the moon */
+}
+
+input:checked + .slider .stars-container {
+    opacity: 0; /* Hidden in light mode */
+}
+
+.star {
+    position: absolute;
+    width: 2px;
+    height: 2px;
+    background-color: #fff;
+    border-radius: 50%;
+    animation: twinkle 1s infinite alternate;
+    box-shadow: 0 0 5px #EEE; /* Subtle glow */
+
+}
+
+.star-2 {
+    top: 5px;
+    left: 2px;
+    animation-delay: 0.2s;
+    box-shadow: 0 0 5px #EEE; /* Subtle glow */
+
+}
+
+.star-3 {
+    bottom: 5px;
+    right: 2px;
+    animation-delay: 0.4s;
+    box-shadow: 0 0 5px #EEE; /* Subtle glow */
+
+}
+
+.star-4 {
+    top: 25px;
+    left: 7px;
+    animation-delay: 0.6s;
+    box-shadow: 0 0 5px #EEE; /* Subtle glow */
+
+}
+
+.star-5 {
+    bottom: 25px;
+    right: 7px;
+    animation-delay: 0.8s;
+    box-shadow: 0 0 5px #EEE; /* Subtle glow */
+
+}
+
+.star-6 {
+    top: 10px;
+    right: 15px;
+    animation-delay: 0.1s;
+    box-shadow: 0 0 5px #EEE; /* Subtle glow */
+
+}
+
+.star-7 {
+    bottom: 10px;
+    left: 15px;
+    animation-delay: 0.5s;
+    box-shadow: 0 0 5px #EEE; /* Subtle glow */
+
+}
+
+.star-8 {
+    top: 15px;
+    right: 25px;
+    animation-delay: 0.9s;
+    box-shadow: 0 0 5px #EEE; /* Subtle glow */
+
+}
+
+@keyframes twinkle {
+    from {
+        opacity: 0.8;
+    }
+    to {
+        opacity: 0.2;
+    }
+}
+
+/* ... other CSS ... */
+
+.cloud {
+    position: absolute;
+    width: 18px;
+    height: 10px;
+    background-color: #ffffff;
+    border-radius: 12px;
+    top: 10px;
+    left: 8px;
+    opacity: 0;
+    transition: opacity 0.4s ease, transform 0.4s ease;
+    animation: float 2s infinite alternate;
+}
+
+.cloud::before {
+    content: '';
+    position: absolute;
+    width: 13px;
+    height: 10px;
+    background-color: #ffffff;
+    border-radius: 50%;
+    top: .75px;
+    left: -2px;
+}
+
+.cloud::after {
+    content: '';
+    position: absolute;
+    width: 13px;
+    height: 15px;
+    background-color: #ffffff;
+    border-radius: 50%;
+    top: -3.5px;
+    right: px;
+}
+
+.cloud::after + .cloud::before { /* New fourth circle */
+    content: '';
+    position: absolute;
+    width: 15px;
+    height: 8px;
+    background-color: #ffffff;
+    border-radius: 50%;
+    bottom: -2px; /* Position the fourth circle */
+    right: 2px;
+}
+
+input:checked + .slider .cloud {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+input:not(:checked) + .slider .cloud {
+    opacity: 0;
+    transform: translateX(-30px);
+}
+
+@keyframes float {
+    from {
+        transform: translatex(0);
+    }
+    to {
+        transform: translatex(2px);
+    }
+}
+
+/* Mobile styles using a media query */
+@media (max-width: 768px) { /* Adjust the breakpoint as needed */
+    header {
+        display: flex;
+        justify-content: space-between; /* Example: Logo on left, toggle and theme on right */
+        align-items: center;
+        padding: 1rem;
+    }
+
+    .theme-toggle-container {
+        /* Style for mobile, making it visible in the header */
+        /* You might use margin, padding, or flexbox to position it */
+        margin-left: 0rem; /* Example: Add some space */
+    }
+
+    nav {
+        /* Styles for the mobile navigation when open */
+        /* You might hide it by default and show it when the menu toggle is active */
+    }
+}
+
+/* ... rest of your CSS ... */

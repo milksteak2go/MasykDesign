@@ -1,0 +1,45 @@
+const projects = [
+    {
+        title: "Fittra London",
+        description: "Renovation and house extension",
+        imageUrl: "https://hawk-style.com/wp-content/uploads/2024/07/kejsy-prevyu-dlya-sajta-18.png",
+        link: "https://hawk-style.com/en/fittra-london/",
+        class: "fittra-london"
+    },
+    {
+        title: "Duna Estate",
+        description: "Real estate agency in Dubai",
+        imageUrl: "https://hawk-style.com/wp-content/uploads/2024/07/1-duna.png",
+        link: "https://hawk-style.com/en/duna-estate/",
+        class: "duna-estate"
+    },
+    {
+        title: "Aerated Concrete",
+        description: "Sale of aerated concrete",
+        imageUrl: "https://hawk-style.com/wp-content/uploads/2024/07/kejsy-prevyu-dlya-sajta.png",
+        link: "https://hawk-style.com/en/aerated-concrete-2/",
+        class: "aerated-concrete"
+    },
+    {
+        title: "III Assault Brigade",
+        description: "Site design",
+        imageUrl: "https://hawk-style.com/wp-content/uploads/2024/07/prevyu.png",
+        link: "https://hawk-style.com/en/iii-assault-brigade/",
+        class: "NAIT"
+    },
+    {
+        title: "III Assault Brigade",
+        description: "Site design",
+        imageUrl: "https://hawk-style.com/wp-content/uploads/2024/07/prevyu.png",
+        link: "https://hawk-style.com/en/iii-assault-brigade/",
+        class: "TRULIOO"
+    },
+    {
+        title: "III Assault Brigade",
+        description: "Site design",
+        imageUrl: "https://hawk-style.com/wp-content/uploads/2024/07/prevyu.png",
+        link: "https://hawk-style.com/en/iii-assault-brigade/",
+        class: "BTCW"
+    }
+    // ... add more projects as needed
+];

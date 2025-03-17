@@ -1,0 +1,191 @@
+.elementor-kit-4{--e-global-color-vamtam_accent_1:#242627;--e-global-color-vamtam_accent_2:#E9E9E7;--e-global-color-vamtam_accent_3:#5F6567;--e-global-color-vamtam_accent_4:#D9AFD0;--e-global-color-vamtam_accent_5:#FFFFFF;--e-global-color-vamtam_accent_6:#000000;--e-global-color-vamtam_accent_7:#00000026;--e-global-color-vamtam_accent_8:#FFFFFF33;--e-global-color-vamtam_sticky_header_bg_color:#0000008F;--e-global-color-e0e8cde:#EE4423;--e-global-typography-vamtam_primary_font-font-family:"Plus Jakarta Sans";--e-global-typography-vamtam_primary_font-font-size:clamp(16px, 0.8vw, 22px);--e-global-typography-vamtam_primary_font-font-weight:400;--e-global-typography-vamtam_primary_font-line-height:1.4em;--e-global-typography-vamtam_h1-font-family:"Plus Jakarta Sans";--e-global-typography-vamtam_h1-font-size:clamp(70px, 3vw, 90px);--e-global-typography-vamtam_h1-font-weight:300;--e-global-typography-vamtam_h1-text-transform:none;--e-global-typography-vamtam_h1-line-height:1.2em;--e-global-typography-vamtam_h2-font-family:"Plus Jakarta Sans";--e-global-typography-vamtam_h2-font-size:clamp(42px, 1.9vw, 60px);--e-global-typography-vamtam_h2-font-weight:normal;--e-global-typography-vamtam_h2-text-transform:none;--e-global-typography-vamtam_h2-font-style:normal;--e-global-typography-vamtam_h2-line-height:1.3em;--e-global-typography-vamtam_h3-font-family:"Plus Jakarta Sans";--e-global-typography-vamtam_h3-font-size:clamp(32px, 1.5vw, 50px);--e-global-typography-vamtam_h3-font-weight:normal;--e-global-typography-vamtam_h3-text-transform:none;--e-global-typography-vamtam_h3-line-height:1.3em;--e-global-typography-vamtam_h4-font-family:"Plus Jakarta Sans";--e-global-typography-vamtam_h4-font-size:clamp(24px, 1.1vw, 40px);--e-global-typography-vamtam_h4-font-weight:500;--e-global-typography-vamtam_h4-text-transform:none;--e-global-typography-vamtam_h4-line-height:1.4em;--e-global-typography-vamtam_h5-font-family:"Plus Jakarta Sans";--e-global-typography-vamtam_h5-font-size:clamp(20px, 0.9vw, 28px);--e-global-typography-vamtam_h5-font-weight:normal;--e-global-typography-vamtam_h5-line-height:1.3em;--e-global-typography-vamtam_h5-letter-spacing:0px;--e-global-typography-vamtam_h6-font-family:"Plus Jakarta Sans";--e-global-typography-vamtam_h6-font-size:clamp(16px, 0.8vw, 22px);--e-global-typography-vamtam_h6-font-weight:500;--e-global-typography-vamtam_h6-line-height:1.2em;--e-global-typography-ddc910b-font-family:"Plus Jakarta Sans";--e-global-typography-ddc910b-font-size:clamp(80px, 6vw, 120px);--e-global-typography-ddc910b-font-weight:300;--e-global-typography-ddc910b-line-height:1.2em;--e-global-typography-b594bf8-font-family:"Plus Jakarta Sans";--e-global-typography-b594bf8-font-size:clamp(140px, 9vw, 180px);--e-global-typography-b594bf8-font-weight:300;--e-global-typography-b594bf8-line-height:1em;--e-global-typography-8247384-font-size:clamp(20px, 0.9vw, 28px);--e-global-typography-8247384-font-style:normal;--e-global-typography-8247384-line-height:1.5em;--e-global-typography-bba7824-font-size:clamp(14px, 0.6vw, 18px);--e-global-typography-bba7824-line-height:1.2em;--e-global-typography-df118b1-font-size:clamp(12px, 0.5vw, 16px);--e-global-typography-df118b1-line-height:1.2em;--e-global-typography-a4423f2-font-size:clamp(28px, 1.4vw, 30px);--e-global-typography-a4423f2-line-height:1.4em;--e-global-typography-155837e-font-size:clamp(14px, 0.6vw, 18px);--e-global-typography-155837e-font-weight:600;--e-global-typography-155837e-line-height:1.6em;--e-global-typography-e323030-font-family:"Plus Jakarta Sans";--e-global-typography-e323030-font-size:clamp(9px, 0.4vw, 12px);--e-global-typography-e323030-font-weight:500;--e-global-typography-e323030-text-transform:uppercase;--e-global-typography-e323030-line-height:1.2em;--e-global-typography-e323030-letter-spacing:0.05em;--e-global-typography-cab5384-font-size:clamp(16px, 0.8vw, 22px);--e-global-typography-cab5384-font-weight:500;--e-global-typography-cab5384-text-transform:none;--e-global-typography-cab5384-line-height:1.6em;--e-global-typography-eafff1a-font-size:clamp(16px, 0.8vw, 22px);--e-global-typography-eafff1a-font-weight:500;--e-global-typography-eafff1a-text-transform:none;--e-global-typography-eafff1a-font-style:normal;--e-global-typography-eafff1a-line-height:1.3em;--e-global-typography-68083cb-font-family:"Plus Jakarta Sans";--e-global-typography-68083cb-font-size:clamp(80px, 9vw, 180px);--e-global-typography-68083cb-font-weight:400;--e-global-typography-68083cb-line-height:1em;--e-global-typography-5f73c7b-font-family:"Plus Jakarta Sans";--e-global-typography-5f73c7b-font-size:clamp(70px, 3vw, 90px);--e-global-typography-5f73c7b-font-weight:700;--e-global-typography-5f73c7b-text-transform:none;--e-global-typography-5f73c7b-line-height:1.2em;--e-global-typography-62ce1e6-font-family:"Plus Jakarta Sans";--e-global-typography-62ce1e6-font-weight:800;--e-global-typography-62ce1e6-text-transform:none;--e-global-typography-62ce1e6-line-height:1.2em;--e-global-typography-7928bf8-font-size:40px;background-color:var( --e-global-color-vamtam_accent_2 );color:var( --e-global-color-vamtam_accent_6 );font-family:var( --e-global-typography-vamtam_primary_font-font-family ), Sans-serif;font-size:var( --e-global-typography-vamtam_primary_font-font-size );font-weight:var( --e-global-typography-vamtam_primary_font-font-weight );line-height:var( --e-global-typography-vamtam_primary_font-line-height );--e-page-transition-entrance-animation:e-page-transition-fade-out;--e-page-transition-exit-animation:e-page-transition-fade-in;--e-page-transition-animation-duration:1000ms;}.elementor-kit-4 button,.elementor-kit-4 input[type="button"],.elementor-kit-4 input[type="submit"],.elementor-kit-4 .elementor-button{background-color:#02010100;font-size:var( --e-global-typography-155837e-font-size );font-weight:var( --e-global-typography-155837e-font-weight );line-height:var( --e-global-typography-155837e-line-height );color:var( --e-global-color-vamtam_accent_6 );border-style:solid;border-width:1px 1px 1px 1px;border-color:var( --e-global-color-vamtam_accent_6 );border-radius:0px 0px 0px 0px;padding:13px 33px 15px 33px;}html .button,html button,html input[type=button],html input[type=submit],html .woocommerce.widget_shopping_cart .widget_shopping_cart_content .buttons a.button,html .woocommerce a.button,html .woocommerce.woocommerce-payment-methods .woocommerce-Message + a.button,html .woocommerce a.button.loading,html .woocommerce .cross-sells .add_to_cart_button,html .woocommerce a.added_to_cart,html .woocommerce button.button,html .woocommerce input.button,html .woocommerce.woocommerce-cart .cross-sells ul.products > li.product .button.add_to_cart_button,html .woocommerce #respond input#submit,html .woocommerce #content input.button,html .woocommerce-page a.button,html .woocommerce-page button.button,html .woocommerce-page input.button,html .woocommerce-page #respond input#submit,html .woocommerce-page #content input.button,html .woocommerce #respond input#submit.alt,html .woocommerce a.button.alt,html .woocommerce button.button.alt,html .woocommerce button.button.alt.disabled,html .woocommerce input.button.alt,html .woocommerce .woocommerce-message .vamtam-close-notice-btn,html a.comment-reply-link,html .elementor-widget-woocommerce-menu-cart.elementor-element .elementor-button.elementor-button--checkout,html .elementor-widget-woocommerce-menu-cart.elementor-element .elementor-button.elementor-button--view-cart{background-color:#02010100;font-size:var( --e-global-typography-155837e-font-size );font-weight:var( --e-global-typography-155837e-font-weight );line-height:var( --e-global-typography-155837e-line-height );color:var( --e-global-color-vamtam_accent_6 );border-style:solid;border-width:1px 1px 1px 1px;border-color:var( --e-global-color-vamtam_accent_6 );border-radius:0px 0px 0px 0px;padding:13px 33px 15px 33px;}.elementor-kit-4 button:hover,.elementor-kit-4 button:focus,.elementor-kit-4 input[type="button"]:hover,.elementor-kit-4 input[type="button"]:focus,.elementor-kit-4 input[type="submit"]:hover,.elementor-kit-4 input[type="submit"]:focus,.elementor-kit-4 .elementor-button:hover,.elementor-kit-4 .elementor-button:focus{background-color:var( --e-global-color-vamtam_accent_6 );color:var( --e-global-color-vamtam_accent_5 );border-style:solid;border-width:1px 1px 1px 1px;border-color:var( --e-global-color-vamtam_accent_6 );border-radius:0px 0px 0px 0px;}html .button:hover,html button:hover,html input[type=button]:hover,html input[type=submit]:hover,html .woocommerce.widget_shopping_cart .widget_shopping_cart_content .buttons a.button:hover,html .woocommerce a.button:hover,html .woocommerce.woocommerce-payment-methods .woocommerce-Message + a.button:hover,html .woocommerce a.button.loading:hover,html .woocommerce .cross-sells .add_to_cart_button:hover,html .woocommerce a.added_to_cart:hover,html .woocommerce button.button:hover,html .woocommerce input.button:hover,html .woocommerce.woocommerce-cart .cross-sells ul.products > li.product .button.add_to_cart_button:hover,html .woocommerce #respond input#submit:hover,html .woocommerce #content input.button:hover,html .woocommerce-page a.button:hover,html .woocommerce-page button.button:hover,html .woocommerce-page input.button:hover,html .woocommerce-page #respond input#submit:hover,html .woocommerce-page #content input.button:hover,html .woocommerce #respond input#submit.alt:hover,html .woocommerce a.button.alt:hover,html .woocommerce button.button.alt:hover,html .woocommerce button.button.alt.disabled:hover,html .woocommerce input.button.alt:hover,html .woocommerce .woocommerce-message .vamtam-close-notice-btn:hover,html a.comment-reply-link:hover,html .elementor-widget-woocommerce-menu-cart.elementor-element .elementor-button.elementor-button--checkout:hover,html .elementor-widget-woocommerce-menu-cart.elementor-element .elementor-button.elementor-button--view-cart:hover{background-color:var( --e-global-color-vamtam_accent_6 );color:var( --e-global-color-vamtam_accent_5 );border-style:solid;border-width:1px 1px 1px 1px;border-color:var( --e-global-color-vamtam_accent_6 );border-radius:0px 0px 0px 0px;}.elementor-kit-4 e-page-transition{background-color:var( --e-global-color-vamtam_accent_2 );}.elementor-kit-4 a{color:var( --e-global-color-vamtam_accent_3 );}.elementor-kit-4 a:hover{color:var( --e-global-color-vamtam_accent_6 );}.elementor-kit-4 h1{color:var( --e-global-color-vamtam_accent_6 );font-family:var( --e-global-typography-vamtam_h1-font-family ), Sans-serif;font-size:var( --e-global-typography-vamtam_h1-font-size );font-weight:var( --e-global-typography-vamtam_h1-font-weight );text-transform:var( --e-global-typography-vamtam_h1-text-transform );line-height:var( --e-global-typography-vamtam_h1-line-height );}.elementor-kit-4 .font-h1{color:var( --e-global-color-vamtam_accent_6 );font-family:var( --e-global-typography-vamtam_h1-font-family ), Sans-serif;font-size:var( --e-global-typography-vamtam_h1-font-size );font-weight:var( --e-global-typography-vamtam_h1-font-weight );text-transform:var( --e-global-typography-vamtam_h1-text-transform );line-height:var( --e-global-typography-vamtam_h1-line-height );}.elementor-kit-4 h2{color:var( --e-global-color-vamtam_accent_6 );font-family:var( --e-global-typography-vamtam_h2-font-family ), Sans-serif;font-size:var( --e-global-typography-vamtam_h2-font-size );font-weight:var( --e-global-typography-vamtam_h2-font-weight );text-transform:var( --e-global-typography-vamtam_h2-text-transform );font-style:var( --e-global-typography-vamtam_h2-font-style );line-height:var( --e-global-typography-vamtam_h2-line-height );}.elementor-kit-4 .font-h2{color:var( --e-global-color-vamtam_accent_6 );font-family:var( --e-global-typography-vamtam_h2-font-family ), Sans-serif;font-size:var( --e-global-typography-vamtam_h2-font-size );font-weight:var( --e-global-typography-vamtam_h2-font-weight );text-transform:var( --e-global-typography-vamtam_h2-text-transform );font-style:var( --e-global-typography-vamtam_h2-font-style );line-height:var( --e-global-typography-vamtam_h2-line-height );}.elementor-kit-4 h3{color:var( --e-global-color-vamtam_accent_6 );font-family:var( --e-global-typography-vamtam_h3-font-family ), Sans-serif;font-size:var( --e-global-typography-vamtam_h3-font-size );font-weight:var( --e-global-typography-vamtam_h3-font-weight );text-transform:var( --e-global-typography-vamtam_h3-text-transform );line-height:var( --e-global-typography-vamtam_h3-line-height );}.elementor-kit-4 .font-h3{color:var( --e-global-color-vamtam_accent_6 );font-family:var( --e-global-typography-vamtam_h3-font-family ), Sans-serif;font-size:var( --e-global-typography-vamtam_h3-font-size );font-weight:var( --e-global-typography-vamtam_h3-font-weight );text-transform:var( --e-global-typography-vamtam_h3-text-transform );line-height:var( --e-global-typography-vamtam_h3-line-height );}.elementor-kit-4 h4{color:var( --e-global-color-vamtam_accent_6 );font-family:var( --e-global-typography-vamtam_h4-font-family ), Sans-serif;font-size:var( --e-global-typography-vamtam_h4-font-size );font-weight:var( --e-global-typography-vamtam_h4-font-weight );text-transform:var( --e-global-typography-vamtam_h4-text-transform );line-height:var( --e-global-typography-vamtam_h4-line-height );}.elementor-kit-4 .font-h4{color:var( --e-global-color-vamtam_accent_6 );font-family:var( --e-global-typography-vamtam_h4-font-family ), Sans-serif;font-size:var( --e-global-typography-vamtam_h4-font-size );font-weight:var( --e-global-typography-vamtam_h4-font-weight );text-transform:var( --e-global-typography-vamtam_h4-text-transform );line-height:var( --e-global-typography-vamtam_h4-line-height );}.elementor-kit-4 h5{color:var( --e-global-color-vamtam_accent_6 );font-family:var( --e-global-typography-vamtam_h5-font-family ), Sans-serif;font-size:var( --e-global-typography-vamtam_h5-font-size );font-weight:var( --e-global-typography-vamtam_h5-font-weight );line-height:var( --e-global-typography-vamtam_h5-line-height );letter-spacing:var( --e-global-typography-vamtam_h5-letter-spacing );}.elementor-kit-4 .font-h5{color:var( --e-global-color-vamtam_accent_6 );font-family:var( --e-global-typography-vamtam_h5-font-family ), Sans-serif;font-size:var( --e-global-typography-vamtam_h5-font-size );font-weight:var( --e-global-typography-vamtam_h5-font-weight );line-height:var( --e-global-typography-vamtam_h5-line-height );letter-spacing:var( --e-global-typography-vamtam_h5-letter-spacing );}.elementor-kit-4 h6{color:var( --e-global-color-vamtam_accent_6 );font-family:var( --e-global-typography-vamtam_h6-font-family ), Sans-serif;font-size:var( --e-global-typography-vamtam_h6-font-size );font-weight:var( --e-global-typography-vamtam_h6-font-weight );line-height:var( --e-global-typography-vamtam_h6-line-height );}.elementor-kit-4 .font-h6{color:var( --e-global-color-vamtam_accent_6 );font-family:var( --e-global-typography-vamtam_h6-font-family ), Sans-serif;font-size:var( --e-global-typography-vamtam_h6-font-size );font-weight:var( --e-global-typography-vamtam_h6-font-weight );line-height:var( --e-global-typography-vamtam_h6-line-height );}.elementor-kit-4 label{font-family:var( --e-global-typography-vamtam_primary_font-font-family ), Sans-serif;font-size:var( --e-global-typography-vamtam_primary_font-font-size );font-weight:var( --e-global-typography-vamtam_primary_font-font-weight );line-height:var( --e-global-typography-vamtam_primary_font-line-height );}.elementor-kit-4 input:not([type="button"]):not([type="submit"]),.elementor-kit-4 textarea,.elementor-kit-4 .elementor-field-textual{font-family:var( --e-global-typography-vamtam_primary_font-font-family ), Sans-serif;font-size:var( --e-global-typography-vamtam_primary_font-font-size );font-weight:var( --e-global-typography-vamtam_primary_font-font-weight );line-height:var( --e-global-typography-vamtam_primary_font-line-height );box-shadow:0px 0px 10px 0px rgba(0, 0, 0, 0);border-style:solid;border-width:0px 0px 1px 0px;border-color:var( --e-global-color-vamtam_accent_7 );border-radius:0px 0px 0px 0px;padding:1.5em 1em 1em 1em;}.elementor-kit-4 select,.elementor-kit-4 .elementor-field-group .elementor-select-wrapper select,.elementor-kit-4 .select2.select2-container .selection > .select2-selection[role="combobox"]{font-family:var( --e-global-typography-vamtam_primary_font-font-family ), Sans-serif;font-size:var( --e-global-typography-vamtam_primary_font-font-size );font-weight:var( --e-global-typography-vamtam_primary_font-font-weight );line-height:var( --e-global-typography-vamtam_primary_font-line-height );}.elementor-kit-4 select,.elementor-kit-4 .elementor-field-group .elementor-select-wrapper select,.elementor-kit-4 .select2.select2-container .select2-selection[role="combobox"],.elementor-kit-4 input[type="checkbox"] + label::before{box-shadow:0px 0px 10px 0px rgba(0, 0, 0, 0);border-style:solid;border-width:0px 0px 1px 0px;border-color:var( --e-global-color-vamtam_accent_7 );border-radius:0px 0px 0px 0px;}.elementor-kit-4 input:focus:not([type="button"]):not([type="submit"]),.elementor-kit-4 textarea:focus,.elementor-kit-4 .elementor-field-textual:focus{box-shadow:0px 0px 10px 0px rgba(0, 0, 0, 0);border-style:solid;border-width:0px 0px 1px 0px;border-color:var( --e-global-color-vamtam_accent_6 );}.elementor-kit-4 select:focus,.elementor-kit-4 .elementor-field-group .elementor-select-wrapper select:focus,.elementor-kit-4 .select2.select2-container .select2-selection[role="combobox"]:focus,.elementor-kit-4 input[type="checkbox"]:focus + label::before{box-shadow:0px 0px 10px 0px rgba(0, 0, 0, 0);border-style:solid;border-width:0px 0px 1px 0px;border-color:var( --e-global-color-vamtam_accent_6 );}.elementor-kit-4 select:hover,.elementor-kit-4 .elementor-field-group .elementor-select-wrapper select:hover,.elementor-kit-4 .select2.select2-container .select2-selection[role="combobox"]:hover,.elementor-kit-4 input:hover:not([type="button"]):not([type="submit"]),.elementor-kit-4 textarea:hover,.elementor-kit-4 .elementor-field-textual:hover,.elementor-kit-4 input[type="checkbox"]:hover + label::before{border-color:var( --e-global-color-vamtam_accent_6 );}.elementor-kit-4 select,.elementor-kit-4 .elementor-field-group .elementor-select-wrapper select,.elementor-kit-4 .select2.select2-container .select2-selection[role="combobox"]{padding:1.5em 1em 1em 1em;}.elementor-section.elementor-section-boxed > .elementor-container{max-width:2000px;}.e-con{--container-max-width:2000px;--container-default-padding-top:0px;--container-default-padding-right:30px;--container-default-padding-bottom:0px;--container-default-padding-left:30px;}.elementor-widget:not(:last-child){margin-block-end:20px;}.elementor-element{--widgets-spacing:20px 20px;--widgets-spacing-row:20px;--widgets-spacing-column:20px;}{}h1.entry-title{display:var(--page-title-display);}@media(max-width:1024px){.elementor-kit-4{--e-global-typography-vamtam_h1-font-size:46px;--e-global-typography-vamtam_h1-line-height:1em;--e-global-typography-vamtam_h2-font-size:36px;--e-global-typography-vamtam_h2-line-height:1.1em;--e-global-typography-vamtam_h3-font-size:30px;--e-global-typography-vamtam_h3-line-height:1.2em;--e-global-typography-vamtam_h5-font-size:20px;--e-global-typography-vamtam_h6-font-size:16px;--e-global-typography-ddc910b-font-size:10vw;--e-global-typography-b594bf8-font-size:13vw;--e-global-typography-8247384-font-size:19px;--e-global-typography-a4423f2-font-size:25px;--e-global-typography-68083cb-font-size:60px;--e-global-typography-5f73c7b-font-size:46px;--e-global-typography-5f73c7b-line-height:1em;--e-global-typography-62ce1e6-line-height:1em;font-size:var( --e-global-typography-vamtam_primary_font-font-size );line-height:var( --e-global-typography-vamtam_primary_font-line-height );}.elementor-kit-4 h1{font-size:var( --e-global-typography-vamtam_h1-font-size );line-height:var( --e-global-typography-vamtam_h1-line-height );}.elementor-kit-4 .font-h1{font-size:var( --e-global-typography-vamtam_h1-font-size );line-height:var( --e-global-typography-vamtam_h1-line-height );}.elementor-kit-4 h2{font-size:var( --e-global-typography-vamtam_h2-font-size );line-height:var( --e-global-typography-vamtam_h2-line-height );}.elementor-kit-4 .font-h2{font-size:var( --e-global-typography-vamtam_h2-font-size );line-height:var( --e-global-typography-vamtam_h2-line-height );}.elementor-kit-4 h3{font-size:var( --e-global-typography-vamtam_h3-font-size );line-height:var( --e-global-typography-vamtam_h3-line-height );}.elementor-kit-4 .font-h3{font-size:var( --e-global-typography-vamtam_h3-font-size );line-height:var( --e-global-typography-vamtam_h3-line-height );}.elementor-kit-4 h4{font-size:var( --e-global-typography-vamtam_h4-font-size );line-height:var( --e-global-typography-vamtam_h4-line-height );}.elementor-kit-4 .font-h4{font-size:var( --e-global-typography-vamtam_h4-font-size );line-height:var( --e-global-typography-vamtam_h4-line-height );}.elementor-kit-4 h5{font-size:var( --e-global-typography-vamtam_h5-font-size );line-height:var( --e-global-typography-vamtam_h5-line-height );letter-spacing:var( --e-global-typography-vamtam_h5-letter-spacing );}.elementor-kit-4 .font-h5{font-size:var( --e-global-typography-vamtam_h5-font-size );line-height:var( --e-global-typography-vamtam_h5-line-height );letter-spacing:var( --e-global-typography-vamtam_h5-letter-spacing );}.elementor-kit-4 h6{font-size:var( --e-global-typography-vamtam_h6-font-size );line-height:var( --e-global-typography-vamtam_h6-line-height );}.elementor-kit-4 .font-h6{font-size:var( --e-global-typography-vamtam_h6-font-size );line-height:var( --e-global-typography-vamtam_h6-line-height );}.elementor-kit-4 button,.elementor-kit-4 input[type="button"],.elementor-kit-4 input[type="submit"],.elementor-kit-4 .elementor-button{font-size:var( --e-global-typography-155837e-font-size );line-height:var( --e-global-typography-155837e-line-height );padding:13px 30px 15px 30px;}html .button,html button,html input[type=button],html input[type=submit],html .woocommerce.widget_shopping_cart .widget_shopping_cart_content .buttons a.button,html .woocommerce a.button,html .woocommerce.woocommerce-payment-methods .woocommerce-Message + a.button,html .woocommerce a.button.loading,html .woocommerce .cross-sells .add_to_cart_button,html .woocommerce a.added_to_cart,html .woocommerce button.button,html .woocommerce input.button,html .woocommerce.woocommerce-cart .cross-sells ul.products > li.product .button.add_to_cart_button,html .woocommerce #respond input#submit,html .woocommerce #content input.button,html .woocommerce-page a.button,html .woocommerce-page button.button,html .woocommerce-page input.button,html .woocommerce-page #respond input#submit,html .woocommerce-page #content input.button,html .woocommerce #respond input#submit.alt,html .woocommerce a.button.alt,html .woocommerce button.button.alt,html .woocommerce button.button.alt.disabled,html .woocommerce input.button.alt,html .woocommerce .woocommerce-message .vamtam-close-notice-btn,html a.comment-reply-link,html .elementor-widget-woocommerce-menu-cart.elementor-element .elementor-button.elementor-button--checkout,html .elementor-widget-woocommerce-menu-cart.elementor-element .elementor-button.elementor-button--view-cart{font-size:var( --e-global-typography-155837e-font-size );line-height:var( --e-global-typography-155837e-line-height );padding:13px 30px 15px 30px;}.elementor-kit-4 label{font-size:var( --e-global-typography-vamtam_primary_font-font-size );line-height:var( --e-global-typography-vamtam_primary_font-line-height );}.elementor-kit-4 input:not([type="button"]):not([type="submit"]),.elementor-kit-4 textarea,.elementor-kit-4 .elementor-field-textual{font-size:var( --e-global-typography-vamtam_primary_font-font-size );line-height:var( --e-global-typography-vamtam_primary_font-line-height );}.elementor-kit-4 select,.elementor-kit-4 .elementor-field-group .elementor-select-wrapper select,.elementor-kit-4 .select2.select2-container .selection > .select2-selection[role="combobox"]{font-size:var( --e-global-typography-vamtam_primary_font-font-size );line-height:var( --e-global-typography-vamtam_primary_font-line-height );}.elementor-section.elementor-section-boxed > .elementor-container{max-width:1024px;}.e-con{--container-max-width:1024px;--container-default-padding-top:0px;--container-default-padding-right:30px;--container-default-padding-bottom:0px;--container-default-padding-left:30px;}}@media(max-width:767px){.elementor-kit-4{--e-global-typography-vamtam_primary_font-font-size:16px;--e-global-typography-vamtam_primary_font-line-height:1.5em;--e-global-typography-vamtam_h1-font-size:36px;--e-global-typography-vamtam_h1-line-height:1.2em;--e-global-typography-vamtam_h2-font-size:28px;--e-global-typography-vamtam_h2-line-height:1.3em;--e-global-typography-vamtam_h3-font-size:24px;--e-global-typography-vamtam_h3-line-height:1.2em;--e-global-typography-vamtam_h4-font-size:20px;--e-global-typography-vamtam_h4-line-height:1.3em;--e-global-typography-vamtam_h5-font-size:18px;--e-global-typography-a4423f2-font-size:22px;--e-global-typography-68083cb-font-size:40px;--e-global-typography-5f73c7b-font-size:36px;--e-global-typography-5f73c7b-line-height:1.2em;--e-global-typography-62ce1e6-line-height:1.2em;font-size:var( --e-global-typography-vamtam_primary_font-font-size );line-height:var( --e-global-typography-vamtam_primary_font-line-height );}.elementor-kit-4 h1{font-size:var( --e-global-typography-vamtam_h1-font-size );line-height:var( --e-global-typography-vamtam_h1-line-height );}.elementor-kit-4 .font-h1{font-size:var( --e-global-typography-vamtam_h1-font-size );line-height:var( --e-global-typography-vamtam_h1-line-height );}.elementor-kit-4 h2{font-size:var( --e-global-typography-vamtam_h2-font-size );line-height:var( --e-global-typography-vamtam_h2-line-height );}.elementor-kit-4 .font-h2{font-size:var( --e-global-typography-vamtam_h2-font-size );line-height:var( --e-global-typography-vamtam_h2-line-height );}.elementor-kit-4 h3{font-size:var( --e-global-typography-vamtam_h3-font-size );line-height:var( --e-global-typography-vamtam_h3-line-height );}.elementor-kit-4 .font-h3{font-size:var( --e-global-typography-vamtam_h3-font-size );line-height:var( --e-global-typography-vamtam_h3-line-height );}.elementor-kit-4 h4{font-size:var( --e-global-typography-vamtam_h4-font-size );line-height:var( --e-global-typography-vamtam_h4-line-height );}.elementor-kit-4 .font-h4{font-size:var( --e-global-typography-vamtam_h4-font-size );line-height:var( --e-global-typography-vamtam_h4-line-height );}.elementor-kit-4 h5{font-size:var( --e-global-typography-vamtam_h5-font-size );line-height:var( --e-global-typography-vamtam_h5-line-height );letter-spacing:var( --e-global-typography-vamtam_h5-letter-spacing );}.elementor-kit-4 .font-h5{font-size:var( --e-global-typography-vamtam_h5-font-size );line-height:var( --e-global-typography-vamtam_h5-line-height );letter-spacing:var( --e-global-typography-vamtam_h5-letter-spacing );}.elementor-kit-4 h6{font-size:var( --e-global-typography-vamtam_h6-font-size );line-height:var( --e-global-typography-vamtam_h6-line-height );}.elementor-kit-4 .font-h6{font-size:var( --e-global-typography-vamtam_h6-font-size );line-height:var( --e-global-typography-vamtam_h6-line-height );}.elementor-kit-4 button,.elementor-kit-4 input[type="button"],.elementor-kit-4 input[type="submit"],.elementor-kit-4 .elementor-button{font-size:var( --e-global-typography-155837e-font-size );line-height:var( --e-global-typography-155837e-line-height );}html .button,html button,html input[type=button],html input[type=submit],html .woocommerce.widget_shopping_cart .widget_shopping_cart_content .buttons a.button,html .woocommerce a.button,html .woocommerce.woocommerce-payment-methods .woocommerce-Message + a.button,html .woocommerce a.button.loading,html .woocommerce .cross-sells .add_to_cart_button,html .woocommerce a.added_to_cart,html .woocommerce button.button,html .woocommerce input.button,html .woocommerce.woocommerce-cart .cross-sells ul.products > li.product .button.add_to_cart_button,html .woocommerce #respond input#submit,html .woocommerce #content input.button,html .woocommerce-page a.button,html .woocommerce-page button.button,html .woocommerce-page input.button,html .woocommerce-page #respond input#submit,html .woocommerce-page #content input.button,html .woocommerce #respond input#submit.alt,html .woocommerce a.button.alt,html .woocommerce button.button.alt,html .woocommerce button.button.alt.disabled,html .woocommerce input.button.alt,html .woocommerce .woocommerce-message .vamtam-close-notice-btn,html a.comment-reply-link,html .elementor-widget-woocommerce-menu-cart.elementor-element .elementor-button.elementor-button--checkout,html .elementor-widget-woocommerce-menu-cart.elementor-element .elementor-button.elementor-button--view-cart{font-size:var( --e-global-typography-155837e-font-size );line-height:var( --e-global-typography-155837e-line-height );}.elementor-kit-4 label{font-size:var( --e-global-typography-vamtam_primary_font-font-size );line-height:var( --e-global-typography-vamtam_primary_font-line-height );}.elementor-kit-4 input:not([type="button"]):not([type="submit"]),.elementor-kit-4 textarea,.elementor-kit-4 .elementor-field-textual{font-size:var( --e-global-typography-vamtam_primary_font-font-size );line-height:var( --e-global-typography-vamtam_primary_font-line-height );}.elementor-kit-4 select,.elementor-kit-4 .elementor-field-group .elementor-select-wrapper select,.elementor-kit-4 .select2.select2-container .selection > .select2-selection[role="combobox"]{font-size:var( --e-global-typography-vamtam_primary_font-font-size );line-height:var( --e-global-typography-vamtam_primary_font-line-height );}.elementor-section.elementor-section-boxed > .elementor-container{max-width:767px;}.e-con{--container-max-width:767px;--container-default-padding-top:0px;--container-default-padding-right:20px;--container-default-padding-bottom:0px;--container-default-padding-left:20px;}}/* Start custom CSS */.portfolio-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    max-width: 1200px;
+    width: 100%;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.project-box {
+    position: relative;
+    overflow: hidden;
+    border-radius: 10px;
+    cursor: pointer;
+    background-color: black;
+    padding: 10px;
+    height: 400px; /* Fixed height for the project box */
+
+}
+
+.project-image-container {
+    position: relative;
+    width: 100%;
+    height: 100%; /* Fill the project box */
+    overflow: hidden;
+    filter: grayscale(100%);
+    transition: filter 0.4s ease, height 0.4s ease; /* Animate height */
+    border-radius: 8px;
+}
+
+.project-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.4s ease;
+    border-radius: 8px;
+}
+
+.project-info {
+    position: absolute; /* Absolute positioning */
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px;
+    box-sizing: border-box;
+    color: white;
+    text-align: left;
+    background-color: black;
+    overflow: hidden;
+}
+
+.project-info-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    transform: translateY(100%); /* Initially hidden below */
+    transition: transform 0.4s ease, opacity 0.4s ease;
+    opacity: 0;
+}
+
+.text-container {
+    margin-bottom: 0;
+    flex: 1;
+    margin-right: 15px;
+}
+
+.project-title {
+    margin: 0 0 5px 0;
+    font-size: 1.2em;
+    font-weight: bold;
+     color: white;
+}
+
+.company-name {
+    margin: 0;
+    font-size: 1em;
+    color: white;
+}
+
+.view-project-button {
+    display: inline-block;
+    padding: 10px 15px;
+    background-color: #007bff;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 1em;
+    transition: background-color 0.3s ease;
+    border: none;
+    white-space: nowrap;
+}
+
+.view-project-button:hover {
+    background-color: #0056b3;
+    cursor: pointer;
+}
+
+/* Hover Effects */
+.project-box:hover > .project-image-container {
+    filter: grayscale(0%);
+     height: calc(100% - 120px); /* Reduce height on hover */
+}
+
+.project-box:hover > .project-image-container > .project-image {
+    transform: scale(1);
+    /*transform: translateY(-20%);*/ /* Remove translateY */
+
+}
+
+.project-box:hover > .project-info > .project-info-container {
+    transform: translateY(0); /* Reveal info */
+    opacity: 1;
+}
+
+@media (max-width: 768px) {
+    .portfolio-container {
+        grid-template-columns: 1fr;
+    }
+
+    .project-box {
+        width: auto;
+        height: auto; /* Allow height to adjust on mobile */
+    }
+
+    .project-image-container {
+        height: auto !important; /* Allow full height on mobile */
+      position: relative;
+    }
+
+    .project-box:hover > .project-image-container > .project-image {
+        transform: scale(1);
+    }
+
+    .project-info-container {
+        flex-direction: column;
+        align-items: flex-start;
+         transform: translateY(0); /* Ensure visible */
+        opacity: 1;
+    }
+    .project-info{
+      position: relative; /*Remove the absolute positioning*/
+        padding-bottom: 30px;
+    }
+
+    .text-container {
+        margin-bottom: 15px;
+        margin-right: 0;
+    }
+}/* End custom CSS */
+/* Start Custom Fonts CSS */@font-face {
+	font-family: 'Plus Jakarta Sans';
+	font-style: normal;
+	font-weight: normal;
+	font-display: auto;
+	src: url('https://pixelpiernyc.vamtam.com/wp-content/uploads/2023/10/PlusJakartaSans-Regular.ttf') format('truetype');
+}
+@font-face {
+	font-family: 'Plus Jakarta Sans';
+	font-style: normal;
+	font-weight: 500;
+	font-display: auto;
+	src: url('https://pixelpiernyc.vamtam.com/wp-content/uploads/2023/10/PlusJakartaSans-Medium.ttf') format('truetype');
+}
+@font-face {
+	font-family: 'Plus Jakarta Sans';
+	font-style: normal;
+	font-weight: 600;
+	font-display: auto;
+	src: url('https://pixelpiernyc.vamtam.com/wp-content/uploads/2023/10/PlusJakartaSans-SemiBold.ttf') format('truetype');
+}
+@font-face {
+	font-family: 'Plus Jakarta Sans';
+	font-style: normal;
+	font-weight: 300;
+	font-display: auto;
+	src: url('https://pixelpiernyc.vamtam.com/wp-content/uploads/2023/10/PlusJakartaSans-Light.ttf') format('truetype');
+}
+@font-face {
+	font-family: 'Plus Jakarta Sans';
+	font-style: normal;
+	font-weight: 800;
+	font-display: auto;
+	src: url('https://www.masykdesign.com/wp-content/uploads/2023/10/PlusJakartaSans-VariableFont_wght.ttf') format('truetype');
+}
+/* End Custom Fonts CSS */
