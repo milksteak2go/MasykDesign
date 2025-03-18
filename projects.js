@@ -24,7 +24,7 @@ const projects = [
     {
         title: "Jiffy Lube",
         description: "Winterization Campaign",
-        imageUrl: "https://github.com/milksteak2go/MasykDesign/blob/master/images/jiffylube/jl_portfolio.jpg?raw=true",
+        imageUrl: "https://raw.githubusercontent.com/milksteak2go/MasykDesign/refs/heads/master/Images/JiffyLube/JL_Portfolio.jpg?raw=true",
         link: "./jiffy-lube.html",
         color: "#212121"    },
 
@@ -40,7 +40,7 @@ const projects = [
         {
             title: "ACSA: COR Modernization",
             description: "Engaging Industry, Informing Progress",
-            imageUrl: "https://github.com/milksteak2go/MasykDesign/blob/master/images/ACSA/ACSA_Portfolio.jpg?raw=true",
+            imageUrl: "https://github.com/milksteak2go/MasykDesign/blob/master/Images/ACSA/ACSA_Portfolio.png?raw=true",
             link: "./acsa.html",
             color: "#424244"    },   
             
