@@ -12,7 +12,7 @@ const projects = [
         title: "Entrust",
         description: "Making Funding Accessible, Empowering Your Future.",
         imageUrl: "https://github.com/milksteak2go/MasykDesign/blob/master/Images/Entrust/Entrust_Portfolio.jpg?raw=true",
-        link: "./entrust.html",
+        link: "./Entrust.html",
         color: "#3c5d79"        
     },
     {
@@ -25,14 +25,14 @@ const projects = [
         title: "Jiffy Lube",
         description: "Winterization Campaign",
         imageUrl: "https://raw.githubusercontent.com/milksteak2go/MasykDesign/refs/heads/master/Images/JiffyLube/JL_Portfolio.jpg?raw=true",
-        link: "./jiffy-lube.html",
+        link: "./Jiffy-Lube.html",
         color: "#212121"    },
 
     {
         title: "Trulioo",
         description: "Streamlining KYC for a Globalized World",
         imageUrl: "https://github.com/milksteak2go/MasykDesign/blob/master/Images/Trulioo/trulioo_portfolio.jpg?raw=true",
-        link: "./trulioo.html",
+        link: "./Trulioo.html",
         color: "#0076b0"    },
         
           
@@ -41,7 +41,7 @@ const projects = [
             title: "ACSA: COR Modernization",
             description: "Engaging Industry, Informing Progress",
             imageUrl: "https://github.com/milksteak2go/MasykDesign/blob/master/Images/ACSA/ACSA_Portfolio.png?raw=true",
-            link: "./acsa.html",
+            link: "./ACSA.html",
             color: "#424244"    },   
             
     
