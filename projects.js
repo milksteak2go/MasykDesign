@@ -2,7 +2,7 @@ const projects = [
     {
         title: "Bitcoin Well",
         description: " Simplifying Bitcoin Purchases",
-        imageUrl: "https://github.com/milksteak2go/MasykDesign/blob/master/Images/BitcoinWell/BTCW_Portfolio.jpg?raw=true",
+        imageUrl: "./Images/BitcoinWell/BTCW_portfolio.jpg",
         link: "./BTCW.html",
         color: "#646464" // Add  color    },
 
@@ -11,27 +11,27 @@ const projects = [
     {
         title: "Entrust",
         description: "Making Funding Accessible, Empowering Your Future.",
-        imageUrl: "https://github.com/milksteak2go/MasykDesign/blob/master/Images/Entrust/Entrust_Portfolio.jpg?raw=true",
+        imageUrl: "./Images/Entrust/Entrust_Portfolio.jpg",
         link: "./Entrust.html",
         color: "#3c5d79"        
     },
     {
         title: "NAIT",
         description: "Celebrating Indigenous Cuisine",
-        imageUrl: "https://github.com/milksteak2go/MasykDesign/blob/master/Images/ChefInRes/Chef_Portfolio.jpg?raw=true",
+        imageUrl: "./Images/ChefinRes/Chef_Portfolio.jpg",
         link: "./NAIT.html",
         color: "#041E42"    },
     {
         title: "Jiffy Lube",
         description: "Winterization Campaign",
-        imageUrl: "https://raw.githubusercontent.com/milksteak2go/MasykDesign/refs/heads/master/Images/JiffyLube/JL_Portfolio.jpg?raw=true",
+        imageUrl: "./Images/Jiffylube/JL_Portfolio.jpg",
         link: "./Jiffy-Lube.html",
         color: "#212121"    },
 
     {
         title: "Trulioo",
         description: "Streamlining KYC for a Globalized World",
-        imageUrl: "https://github.com/milksteak2go/MasykDesign/blob/master/Images/Trulioo/trulioo_portfolio.jpg?raw=true",
+        imageUrl: "./Images/Trulioo/Trulioo_Portfolio.jpg",
         link: "./Trulioo.html",
         color: "#0076b0"    },
         
@@ -40,7 +40,7 @@ const projects = [
         {
             title: "ACSA: COR Modernization",
             description: "Engaging Industry, Informing Progress",
-            imageUrl: "https://github.com/milksteak2go/MasykDesign/blob/master/Images/ACSA/ACSA_Portfolio.jpg?raw=true",
+            imageUrl: "./Images/ACSA/ACSA_Portfolio.jpg",
             link: "./ACSA.html",
             color: "#424244"    },   
             
