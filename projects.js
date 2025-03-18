@@ -31,7 +31,7 @@ const projects = [
     {
         title: "Trulioo",
         description: "Streamlining KYC for a Globalized World",
-        imageUrl: "https://github.com/milksteak2go/MasykDesign/blob/master/images/trulioo/trulioo_portfolio.jpg?raw=true",
+        imageUrl: "https://github.com/milksteak2go/MasykDesign/blob/master/Images/Trulioo/trulioo_portfolio.jpg?raw=true",
         link: "./trulioo.html",
         color: "#0076b0"    },
         
