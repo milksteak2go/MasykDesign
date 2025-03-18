@@ -40,7 +40,7 @@ const projects = [
         {
             title: "ACSA: COR Modernization",
             description: "Engaging Industry, Informing Progress",
-            imageUrl: "https://github.com/milksteak2go/MasykDesign/blob/master/Images/ACSA/ACSA_Portfolio.png?raw=true",
+            imageUrl: "https://github.com/milksteak2go/MasykDesign/blob/master/Images/ACSA/ACSA_Portfolio.jpg?raw=true",
             link: "./ACSA.html",
             color: "#424244"    },   
             
