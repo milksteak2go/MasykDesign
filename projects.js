@@ -2,7 +2,7 @@ const projects = [
     {
         title: "Bitcoin Well",
         description: " Simplifying Bitcoin Purchases",
-        imageUrl: "./Images/BitcoinWell/BTCW_portfolio.jpg",
+        imageUrl: "./Images/BitcoinWell/BTCW_Portfolio.jpg",
         link: "./BTCW.html",
         color: "#646464" // Add  color    },
 
@@ -18,20 +18,20 @@ const projects = [
     {
         title: "NAIT",
         description: "Celebrating Indigenous Cuisine",
-        imageUrl: "./Images/ChefinRes/Chef_Portfolio.jpg",
+        imageUrl: "./Images/ChefInRes/Chef_Portfolio.jpg",
         link: "./NAIT.html",
         color: "#041E42"    },
     {
         title: "Jiffy Lube",
         description: "Winterization Campaign",
-        imageUrl: "./Images/Jiffylube/JL_Portfolio.jpg",
+        imageUrl: "./Images/JiffyLube/JL_Portfolio.jpg",
         link: "./Jiffy-Lube.html",
         color: "#212121"    },
 
     {
         title: "Trulioo",
         description: "Streamlining KYC for a Globalized World",
-        imageUrl: "./Images/Trulioo/Trulioo_Portfolio.jpg",
+        imageUrl: "./Images/Trulioo/Trulioo_portfolio.jpg",
         link: "./Trulioo.html",
         color: "#0076b0"    },
         
