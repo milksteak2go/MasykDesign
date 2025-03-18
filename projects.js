@@ -18,7 +18,7 @@ const projects = [
     {
         title: "NAIT",
         description: "Celebrating Indigenous Cuisine",
-        imageUrl: "https://github.com/milksteak2go/MasykDesign/blob/master/images/chefinres/chef_portfolio.jpg?raw=true",
+        imageUrl: "https://github.com/milksteak2go/MasykDesign/blob/master/Images/ChefInRes/Chef_Portfolio.jpg?raw=true",
         link: "./NAIT.html",
         color: "#041E42"    },
     {
