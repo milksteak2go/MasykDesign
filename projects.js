@@ -18,20 +18,20 @@ const projects = [
     {
         title: "NAIT",
         description: "Celebrating Indigenous Cuisine",
-        imageUrl: "https://github.com/milksteak2go/MasykDesign/blob/master/images/chefinres/chef_portfolio.jpg",
+        imageUrl: "https://github.com/milksteak2go/MasykDesign/blob/master/images/chefinres/chef_portfolio.jpg?raw=true",
         link: "./NAIT.html",
         color: "#041E42"    },
     {
         title: "Jiffy Lube",
         description: "Winterization Campaign",
-        imageUrl: "https://github.com/milksteak2go/MasykDesign/blob/master/images/jiffylube/jl_portfolio.jpg",
+        imageUrl: "https://github.com/milksteak2go/MasykDesign/blob/master/images/jiffylube/jl_portfolio.jpg?raw=true",
         link: "./jiffy-lube.html",
         color: "#212121"    },
 
     {
         title: "Trulioo",
         description: "Streamlining KYC for a Globalized World",
-        imageUrl: "https://github.com/milksteak2go/MasykDesign/blob/master/images/trulioo/trulioo_portfolio.jpg",
+        imageUrl: "https://github.com/milksteak2go/MasykDesign/blob/master/images/trulioo/trulioo_portfolio.jpg?raw=true",
         link: "./trulioo.html",
         color: "#0076b0"    },
         
@@ -40,7 +40,7 @@ const projects = [
         {
             title: "ACSA: COR Modernization",
             description: "Engaging Industry, Informing Progress",
-            imageUrl: "https://github.com/milksteak2go/MasykDesign/blob/master/images/ACSA/ACSA_Portfolio.jpg",
+            imageUrl: "https://github.com/milksteak2go/MasykDesign/blob/master/images/ACSA/ACSA_Portfolio.jpg?raw=true",
             link: "./acsa.html",
             color: "#424244"    },   
             
