@@ -319,6 +319,22 @@ nav.open a { /* Assuming you add an 'open' class to your nav when the menu is ac
     nav a::before {
         display: none;
     }
+
+	   .hero-image {
+        width: 100%; /* Adjust as needed */
+        height: auto;
+        max-width: 300px; /* Limit maximum size */
+        max-height: 600px;
+        border-radius: %;
+        object-fit: fit;
+        position: absolute;
+        top: 44%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        animation: float-xy 92s ease-in-out infinite; /* Longer duration */
+        color: #a9a9a9;
+    }
+}
 }
 
 
