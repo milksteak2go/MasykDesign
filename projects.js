@@ -2,7 +2,7 @@ const projects = [
     {
         title: "Bitcoin Well",
         description: " Simplifying Bitcoin Purchases",
-        imageUrl: "./images/BitcoinWell/BTCW_portfolio.jpg",
+        imageUrl: "./Images/BitcoinWell/BTCW_Portfolio.jpg",
         link: "./BTCW.html",
         color: "#646464" // Add  color    },
 
@@ -11,28 +11,28 @@ const projects = [
     {
         title: "Entrust",
         description: "Making Funding Accessible, Empowering Your Future.",
-        imageUrl: "./images/entrust/entrust_portfolio.jpg",
-        link: "./entrust.html",
+        imageUrl: "./Images/Entrust/Entrust_Portfolio.jpg",
+        link: "./Entrust.html",
         color: "#3c5d79"        
     },
     {
         title: "NAIT",
         description: "Celebrating Indigenous Cuisine",
-        imageUrl: "./images/chefinres/chef_portfolio.jpg",
+        imageUrl: "./Images/ChefInRes/Chef_Portfolio.jpg",
         link: "./NAIT.html",
         color: "#041E42"    },
     {
         title: "Jiffy Lube",
         description: "Winterization Campaign",
-        imageUrl: "./images/jiffylube/jl_portfolio.jpg",
-        link: "./jiffy-lube.html",
+        imageUrl: "./Images/JiffyLube/JL_Portfolio.jpg",
+        link: "./Jiffy-Lube.html",
         color: "#212121"    },
 
     {
         title: "Trulioo",
         description: "Streamlining KYC for a Globalized World",
-        imageUrl: "./images/trulioo/trulioo_portfolio.jpg",
-        link: "./trulioo.html",
+        imageUrl: "./Images/Trulioo/trulioo_portfolio.jpg",
+        link: "./Trulioo.html",
         color: "#0076b0"    },
         
           
@@ -40,8 +40,8 @@ const projects = [
         {
             title: "ACSA: COR Modernization",
             description: "Engaging Industry, Informing Progress",
-            imageUrl: "./images/ACSA/ACSA_Portfolio.jpg",
-            link: "./acsa.html",
+            imageUrl: "./Images/ACSA/ACSA_Portfolio.jpg",
+            link: "./ACSA.html",
             color: "#424244"    },   
             
     

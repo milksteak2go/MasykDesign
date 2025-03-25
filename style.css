@@ -43,6 +43,15 @@ body {
 
 
 
+/* --- Disable Custom Cursor on Mobile --- */
+@media (max-width: 768px) { /* Adjust the breakpoint as needed */
+    #custom-cursor {
+        display: none; /* Hide the cursor on mobile */
+    }
+}
+
+
+
 
 /*  Apply to common clickable elements */
 a, button, input[type="submit"], input[type="button"], input[type="radio"], input[type="checkbox"], label, select, summary, [role="button"], [tabindex] {
@@ -455,9 +464,35 @@ main {
 
 }
 @media (max-width: 768px) { /*  Example breakpoint */
+    
     .hero-text h1 {
         font-size: 16vw; /*  Increase scaling for smaller screens */
     }
+
+    .hero-image {
+        width: 100%; /* Adjust as needed */
+        height: auto;
+        max-width: 300px; /* Limit maximum size */
+        max-height: 600px;
+        border-radius: %;
+        object-fit: fit;
+        position: absolute;
+        top: 44%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        animation: float-xy 92s ease-in-out infinite; /* Longer duration */
+        color: #a9a9a9;
+    }
+    nav ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      width: 100%;
+        margin-left: 0px;
+      }
 }
 
 
@@ -559,6 +594,7 @@ main {
     position: relative;
     padding-left: 1rem; /* Adjust as needed */
     padding-right: 1rem; /* Adjust as needed */
+    width: 100% ;
 }
 
 .marquee {
@@ -612,13 +648,15 @@ main {
 }
 
 #portfolio {
-    padding: 80px 20px; /* Increased padding for better visual spacing */
+    padding-top: 80px ; /* Increased padding for better visual spacing */
     box-sizing: border-box;
     width: 100%;
     position: relative; /* To position the grid */
     scroll-margin-top: 70px; /* Height of your fixed header, adjust as needed */
     justify-content: center;
     display: flex;
+    padding-left: 20px;
+    padding-right: 20px;
 }
     
  /* style.css */
@@ -1686,7 +1724,7 @@ button[type="submit"]:hover {
   .project-hero-left {
     width: 100%;        /* Set fixed width */
     height: 402px;       /* Set fixed height */
-     background-color: rgb(35, 35, 35); /* Dark gray background */
+     background-color:var(--project-hero-bg-color);
      padding: 30px;
      padding-top: 188.5px;
      border-radius: 30px;  /* Rounded corners */
@@ -2190,7 +2228,7 @@ margin-bottom: 20px;}
   @media screen and (max-width: 768px) {
 
     .project-goal{
-        background-color:  #232323; /* Changed intro background color */
+        background-color:  var(--project-hero-bg-color);
         color: #ccc;
        width: 100%;
        padding: 30px;
@@ -2368,7 +2406,7 @@ margin-bottom: 20px;}
         margin-left: 0px;
         width: 100%;
         height: 680px;
-        background-color: rgb(35, 35, 35);
+        background-color: var(--project-hero-bg-color);
         padding: 30px;
         border-radius: 30px;
         display: flex;
@@ -2395,6 +2433,7 @@ margin-bottom: 20px;}
         height: auto;
         margin-right: 0;
         margin-bottom: 20px;
+        background-color: var(--project-hero-bg-color);
     }
 
       
@@ -2668,7 +2707,7 @@ margin-bottom: 20px;}
         margin-left: 0px;
         width: 100%;
         height: auto;
-        background-color: rgb(35, 35, 35);
+        background-color: var(--project-hero-bg-color);
         padding: 30px;
         border-radius: 30px;
         display: flex;
@@ -2676,10 +2715,9 @@ margin-bottom: 20px;}
         justify-content: center;
         align-items: flex-start;
         text-align: left;
-        color: white;
+        color: var(--project-para-color);
         font-family: 'Open Sans', sans-serif; 
         font-size: large;
-        color: #ccc;
         line-height: 1.2;
         margin-top:20px;
     }
@@ -2862,7 +2900,7 @@ margin-bottom: 20px;}
         margin-left: 0px;
         width: 100%;
         height: 680px;
-        background-color: rgb(35, 35, 35);
+        background-color: var(--project-hero-bg-color);
         padding: 30px;
         border-radius: 30px;
         display: flex;
