@@ -504,6 +504,14 @@ main {
       width: 100%;
         margin-left: 0px;
       }
+
+      .hero-image-container {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 83%;
+        height: 100%;
+        z-index: 1;
 }
 
 
