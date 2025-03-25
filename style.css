@@ -334,6 +334,14 @@ nav.open a { /* Assuming you add an 'open' class to your nav when the menu is ac
         animation: float-xy 92s ease-in-out infinite; /* Longer duration */
         color: #a9a9a9;
     }
+nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
 }
 }
 
