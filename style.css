@@ -436,6 +436,7 @@ main {
     height: 100%;
     z-index: 1;  /*  Below the text */
      /*  We *keep* pointer-events on the container for the mouse-follow effect */
+     overflow: hidden;
 }
 
 
