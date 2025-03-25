@@ -495,7 +495,7 @@ main {
         transform: translate(-50%, -50%);
         animation: float-xy 92s ease-in-out infinite; /* Longer duration */
         color: #a9a9a9;
-        overflow: :hidden;
+        overflow: hidden;
     }
     nav ul {
         list-style: none;
