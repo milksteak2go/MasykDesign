@@ -479,7 +479,7 @@ main {
 @media (max-width: 768px) { /*  Example breakpoint */
     
     .hero-text h1 {
-        font-size: 16vw; /*  Increase scaling for smaller screens */
+        font-size: 22vw; /*  Increase scaling for smaller screens */
     }
 
     .hero-image {
